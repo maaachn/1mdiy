@@ -14,7 +14,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     @if (Auth::check())
-                        <li><a href="#">材料カテゴリー</a></li>
+                        <li><a href="{{ route('materials.get') }}">材料カテゴリー</a></li>
 
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -37,7 +37,7 @@
                     @else
                         <li><a href="{{ route('signup.get') }}">サインアップ</a></li>
                         <li><a href="{{ route('login') }}">ログイン</a></li>
-                        <li><a href="#">材料カテゴリー</a></li>
+                        <li><a href="{{ route('materials.get') }}">材料カテゴリー</a></li>
                     @endif
                 </ul>
             </div>

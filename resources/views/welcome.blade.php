@@ -6,7 +6,7 @@
             <div class="text-center">
                 <div class="cover-contents">
                     <h1>素敵なモノと出会う場所</h1>
-                        <a href="#" class="btn btn-success btn-lg">Get started</a>
+                        <a href="{{ route('materials.get') }}" class="btn btn-success btn-lg">Get started</a>
                     @if (!Auth::check())
                         <a href="{{ route('signup.get') }}" class="btn btn-success btn-lg">Signup</a>
                         <a href="{{ route('login.post') }}" class="btn btn-success btn-lg">Login</a>
