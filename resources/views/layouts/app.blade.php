@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="#">
     </head>
     <body>
-       
+        @include('commons.navbar')  
 
         @yield('cover')
 
