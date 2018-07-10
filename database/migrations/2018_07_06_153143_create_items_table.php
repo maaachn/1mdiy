@@ -20,7 +20,7 @@ class CreateItemsTable extends Migration
             $table->string('image_url');
             $table->string('m_type')->index();
             $table->string('material1');
-            $table->string('material1');
+            $table->string('material2');
             $table->string('material3');
             $table->string('material4');
             $table->string('material5');

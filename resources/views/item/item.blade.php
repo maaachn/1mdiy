@@ -14,9 +14,12 @@
                         <p>{!! nl2br(e($item->content)) !!}</p>
                     </div>
                 </div>
+                @if (Auth::check())
+                <div class="panel-footer text-center">
+                     @include('item.want_button', ['item' => $item])
+                </div>
+                @endif
             </a>
-            
-            
         </div>
     </li>
 @endforeach
