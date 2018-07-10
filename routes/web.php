@@ -23,3 +23,6 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 Route::get('materials', 'ItemsController@materials')->name('materials.get');
 Route::get('index', 'ItemsController@index')->name('index.get');
 Route::get('show/{id}', 'ItemsController@show')->name('show.get');
+
+Route::post('want/{id}', 'UsersController@store')->name('user.want');
+Route::delete('dont_want/{id}', 'UsersController@destroy')->name('user.dont_want');
