@@ -3,37 +3,20 @@
         
         <div class="status text-center">
             
-            <!--<div>-->
-            <!--    {!! link_to_route('items.show', $item->name, ['id' => $item->id]) !!}-->
-            <!--</div>-->
-            <div class="panel panel-default">
+           
+            <a class="panel panel-default col-xs-6 col-md-4" href="{{route('show.get',['id' => $item->id])}}">
                 <div class="panel-heading text-center">
                     <div class="media-left">
                         <img class="media-object img-rounded" src="{{ $item->image_url }}" alt="">
                     </div>
-                </div>
-                <div class="panel-body">
-                    <div>
+                    <div class="media-center">
                         <p>{!! nl2br(e($item->name)) !!}</p>
-                        <p>{!! nl2br(e($item->explain)) !!}</p>
+                        <p>{!! nl2br(e($item->content)) !!}</p>
                     </div>
                 </div>
-            </div> 
-            <!--<div class="btn-horizontal">-->
-            <!--   <div class="btn-group">-->
-            <!--    @if (Auth::check())-->
-            <!--        @if (Auth::user()->is_wanting($item->id))-->
-            <!--            {!! Form::open(['route' => ['user.unwant', $item->id], 'method' => 'delete']) !!}-->
-            <!--            {!! Form::submit('unwant', ['class' => 'btn btn-warning btn-xs']) !!}-->
-            <!--            {!! Form::close() !!}-->
-            <!--        @else-->
-            <!--            {!! Form::open(['route' => ['user.want', $item->id]]) !!}-->
-            <!--                {!! Form::submit('want to go', ['class' => "btn btn-primary btn-xs"]) !!}-->
-            <!--            {!! Form::close() !!}-->
-            <!--        @endif-->
-            <!--    @endif-->
-            <!--   </div>-->
-            <!--</div>-->
+            </a>
+            
+            
         </div>
     </li>
 @endforeach

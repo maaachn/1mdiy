@@ -21,3 +21,5 @@ Route::post('login', 'Auth\LoginController@login')->name('login.post');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 
 Route::get('materials', 'ItemsController@materials')->name('materials.get');
+Route::get('index', 'ItemsController@index')->name('index.get');
+Route::get('show/{id}', 'ItemsController@show')->name('show.get');

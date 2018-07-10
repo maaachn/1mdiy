@@ -2,5 +2,4 @@
 
 @section('content')
     @include('item.item')
-    {!! $item->render() !!}
 @endsection
