@@ -13,14 +13,61 @@ class ItemsController extends Controller
         return view('item.materials');
     }
     
-    public function index(){
-        
-        $items = Item::all();
+    public function bin(){
+            
+        $items = \DB::table('items')->select('items.*')->where('m_type', 'びん')->paginate(10);
 
         return view('item.index',[
             'items' => $items,
             ]);
     }
+    
+    public function box(){
+            
+        $items = \DB::table('items')->select('items.*')->where('m_type', '箱')->paginate(10);
+
+        return view('item.index',[
+            'items' => $items,
+            ]);
+    }
+    
+    public function flower(){
+            
+        $items = \DB::table('items')->select('items.*')->where('m_type', '花')->paginate(10);
+
+        return view('item.index',[
+            'items' => $items,
+            ]);
+    }
+    
+    public function cardboard(){
+            
+        $items = \DB::table('items')->select('items.*')->where('m_type', '段ボール')->paginate(10);
+
+        return view('item.index',[
+            'items' => $items,
+            ]);
+    }    
+    
+    public function others(){
+            
+        $items = \DB::table('items')->select('items.*')->where('m_type', 'その他')->paginate(10);
+
+        return view('item.index',[
+            'items' => $items,
+            ]);
+    }
+
+    public function index(){
+        
+        $items = Item::paginate(10);
+
+        return view('item.index',[
+            'items' => $items,
+            ]);
+    }
+    
+            
     
     public function show($id){
         

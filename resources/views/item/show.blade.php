@@ -7,12 +7,20 @@
                 <h1>{{ $item->name }}</h1>
                 <h2>{{ $item->content }}</h2>
                 
-                <img src="{{ $item->image_url }}">
-      
-                <div class="buttons text-center">
-                            
-                </div>
-                        
+                
+                
+                <div class="row">
+                    <div class="panel col-xs-6">
+                        <div class="panel-heading">
+                            <img src="{{ $item->image_url }}">
+                        </div>
+                        <div class="panel-body">
+                            @if(Auth::check())
+                                @include('item.want_button', ['item' => $item])
+                            @endif
+                        </div>
+                    </div>
+                </div>        
                         
                 <h2>材料</h2>
                 
@@ -33,6 +41,16 @@
 　　                <li>{{ $item->recipe3 }}</li>
 　　                <li>{{ $item->recipe4 }}</li>
 　　                <li>{{ $item->recipe5 }}</li>
+　                </ul>
+　                
+　                <h2>必要な道具</h2>
+　                
+　                <ul>
+　　                <li>{{ $item->tool1 }}</li>
+　　                <li>{{ $item->tool2 }}</li>
+　　                <li>{{ $item->tool3 }}</li>
+　　                <li>{{ $item->tool4 }}</li>
+　　                <li>{{ $item->tool5 }}</li>
 　                </ul>
                 
                

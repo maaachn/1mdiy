@@ -13,7 +13,28 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
         <link rel="stylesheet" href="#">
+        
+        <style>
+            li{
+                list-style : none;
+            }
+            
+            /* item */
+.media .panel-body {
+    height: 70px;
+}
+.media .panel-heading {
+    height: 250px;
+}
+.media .panel-heading img {
+    height: 240px;
+    max-width: 240px;
+}
+
+        </style>
     </head>
+    
+    
     <body>
         @include('commons.navbar')  
 

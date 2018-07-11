@@ -21,7 +21,13 @@ Route::post('login', 'Auth\LoginController@login')->name('login.post');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 
 Route::get('materials', 'ItemsController@materials')->name('materials.get');
-Route::get('index', 'ItemsController@index')->name('index.get');
+    //材料カテゴリー
+    Route::get('bin', 'ItemsController@bin')->name('index.bin');
+    Route::get('box', 'ItemsController@box')->name('index.box');
+    Route::get('flower', 'ItemsController@flower')->name('index.flower');
+    Route::get('cardboard', 'ItemsController@cardboard')->name('index.cardboard');
+    Route::get('others', 'ItemsController@others')->name('index.others');
+    Route::get('index', 'ItemsController@index')->name('index.all');
 Route::get('show/{id}', 'ItemsController@show')->name('show.get');
 
 Route::post('want/{id}', 'UsersController@store')->name('user.want');

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="row">
-        <aside class="col-xs-4">
+        <aside class="col-xs-2">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">{{ $user->name }}</h3>
@@ -12,9 +12,10 @@
                 </div>
             </div>
         </aside>
-        <div class="col-xs-8">
+        <div class="col-xs-10">
             
             @include('item.item', ['items' => $items])
+            {!! $items->render() !!}
         </div>
         
     </div>

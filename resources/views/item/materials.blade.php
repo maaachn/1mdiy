@@ -7,27 +7,51 @@
 <div class="row">
     
         <div class="materials-item-wrapper col-xs-6 col-md-4 ">
-            <a class="panel-wrapper" href="/">
+            <a class="panel-wrapper" href="{{ route('index.bin') }}">
                 <div class="panel panel-info">
-                    <p>bin</p>
+                    <p>びん</p>
                 </div>
             </a> 
         </div>
     
         <div class="materials-item-wrapper col-xs-6 col-md-4">
+            <a class="panel-wrapper" href="{{ route('index.box') }}">
             <div class="panel panel-info">
-                <p>can</p>
+                <p>空き箱</p>
             </div>
+            </a>
         </div>
+        
         <div class="materials-item-wrapper col-xs-6 col-md-4">
+            <a class="panel-wrapper" href="{{ route('index.flower') }}">
             <div class="panel panel-info">
-                <p>paper-bag</p>
+                <p>お花</p>
             </div>
+            </a>
         </div>
+        
         <div class="materials-item-wrapper col-xs-6 col-md-4">
+            <a class="panel-wrapper" href="{{ route('index.cardboard') }}">
             <div class="panel panel-info">
-                <p>box</p>
+                <p>段ボール</p>
             </div>
+            </a>
+        </div>
+        
+        <div class="materials-item-wrapper col-xs-6 col-md-4">
+            <a class="panel-wrapper" href="{{ route('index.others') }}">
+            <div class="panel panel-info">
+                <p>その他</p>
+            </div>
+            </a>
+        </div>
+        
+        <div class="materials-item-wrapper col-xs-6 col-md-4">
+            <a class="panel-wrapper" href="{{ route('index.all') }}">
+            <div class="panel panel-info">
+                <p>全種類</p>
+            </div>
+            </a>
         </div>
 </div>
 
