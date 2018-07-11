@@ -26,3 +26,6 @@ Route::get('show/{id}', 'ItemsController@show')->name('show.get');
 
 Route::post('want/{id}', 'UsersController@store')->name('user.want');
 Route::delete('dont_want/{id}', 'UsersController@destroy')->name('user.dont_want');
+
+Route::get('user/{id}', 'UsersController@show')->name('user.show');
+

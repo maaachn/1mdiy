@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers;
 
+use App\User;
+
 class UsersController extends Controller
 {
     public function wants($id)
     {
         $user = User::find($id);
-        $wants = $user->wants()->paginate(10);
+        $wants = $user->items()->paginate(10);
 
         $data = [
             'user' => $user,
@@ -32,5 +34,18 @@ class UsersController extends Controller
     {
         \Auth::user()->dont_want($id);
         return redirect()->back();
+    }
+    
+     public function show($id)
+    {
+        $user = User::find($id);
+        $wants = $user->items()->paginate(10);
+        
+        $data = [
+            'user' => $user,
+            'items' => $wants,
+        ];
+        
+        return view('user.show', $data);
     }
 }
