@@ -13,8 +13,30 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    
-                        <li><a href="{{ route('materials.get') }}">材料カテゴリー</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">材料から探す</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="{{ route('index.bin') }}">びん</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('index.box') }}">空き箱</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('index.flower') }}">お花</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('index.cardboard') }}">段ボール</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('index.others') }}">その他</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('index.all') }}">全種類</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
                     @if (Auth::check())
                       
                         <li class="dropdown">
