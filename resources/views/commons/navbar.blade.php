@@ -13,6 +13,8 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+                    
+                        <li><a href="{{ route('materials.get') }}">材料カテゴリー</a></li>
                     @if (Auth::check())
                       
                         <li class="dropdown">
@@ -25,7 +27,10 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="{{ route('user.show', ['id' => Auth::user()->id]) }}">マイページ</a>
+                                    <a href="{{ route('users.show', ['id' => Auth::user()->id]) }}">マイページ</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('works.create', ['id' => Auth::user()->id]) }}">作品を投稿</a>
                                 </li>
                                 <li role="separator" class="divider"></li>
                                 <li>
@@ -38,6 +43,8 @@
                         <li><a href="{{ route('login') }}">ログイン</a></li>
                         
                     @endif
+                        
+                        
                 </ul>
             </div>
         </div>
