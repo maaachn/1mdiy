@@ -32,6 +32,11 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Item::class, 'item_user', 'user_id', 'want_id')->withTimestamps();
     }
+    
+    //ユーザー投稿用のHasManyファンクション
+    public function works(){
+        return $this->hasMany(Work::class);
+    }
 
     public function want_items()
     {
