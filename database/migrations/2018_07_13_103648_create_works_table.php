@@ -21,20 +21,20 @@ class CreateWorksTable extends Migration
             $table->string('image_url');
             $table->string('m_type')->index();
             $table->string('material1');
-            $table->string('material2')->nullable()->change();
-            $table->string('material3')->nullable()->change();
-            $table->string('material4')->nullable()->change();
-            $table->string('material5')->nullable()->change();
+            $table->string('material2')->nullable();
+            $table->string('material3')->nullable();
+            $table->string('material4')->nullable();
+            $table->string('material5')->nullable();
             $table->string('recipe1');
-            $table->string('recipe2')->nullable()->change();
-            $table->string('recipe3')->nullable()->change();
-            $table->string('recipe4')->nullable()->change();
-            $table->string('recipe5')->nullable()->change();
+            $table->string('recipe2')->nullable();
+            $table->string('recipe3')->nullable();
+            $table->string('recipe4')->nullable();
+            $table->string('recipe5')->nullable();
             $table->string('tool1');
-            $table->string('tool2')->nullable()->change();
-            $table->string('tool3')->nullable()->change();
-            $table->string('tool4')->nullable()->change();
-            $table->string('tool5')->nullable()->change();
+            $table->string('tool2')->nullable();
+            $table->string('tool3')->nullable();
+            $table->string('tool4')->nullable();
+            $table->string('tool5')->nullable();
             $table->timestamps();
             
             // Foreign key constraint

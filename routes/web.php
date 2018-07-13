@@ -33,5 +33,23 @@ Route::get('show/{id}', 'ItemsController@show')->name('show.get');
 Route::post('want/{id}', 'UsersController@store')->name('user.want');
 Route::delete('dont_want/{id}', 'UsersController@destroy')->name('user.dont_want');
 
-Route::get('user/{id}', 'UsersController@show')->name('user.show');
 
+
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::resource('users', 'UsersController', ['only' => ['index', 'show']]);
+   
+    Route::group(['prefix' => 'users/{id}'], function () {
+        // Route::post('follow', 'UserFollowController@store')->name('user.follow');
+        // Route::delete('unfollow', 'UserFollowController@destroy')->name('user.unfollow');
+        // Route::get('followings', 'UsersController@followings')->name('users.followings');
+        // Route::get('followers', 'UsersController@followers')->name('users.followers');
+    
+        // Route::post('fav', 'UserFavController@store')->name('user.fav');
+        // Route::delete('unfav', 'UserFavController@destroy')->name('user.unfav');
+        // Route::get('favorites', 'UsersController@favorites')->name('users.favorites');
+    });
+    //ユーザー投稿機能,ユーザー投稿ページ,ユーザー投稿詳細ページ
+    Route::resource('works', 'WorksController');
+    
+});

@@ -26,7 +26,9 @@ class Work extends Model
         'tool2',
         'tool3',
         'tool4',
-        'tool5',];
+        'tool5',
+        ];
+        
     public function user()
     {
         return $this->belongsTo(User::class);
