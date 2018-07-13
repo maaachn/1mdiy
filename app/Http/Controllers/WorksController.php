@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Work;
 
 class WorksController extends Controller
 {
@@ -56,12 +57,12 @@ class WorksController extends Controller
             
         ]);
 
-        return redirect('/');
+        return redirect('works/create');
     }
     
     public function destroy($id)
     {
-        $micropost = \App\Work::find($id);
+        $work = \App\Work::find($id);
 
         if (\Auth::user()->id === $work->user_id) {
             $work->delete();
@@ -80,5 +81,13 @@ class WorksController extends Controller
             ];
         $data += $this->counts($user);    
         return view('works.create', $data);
+    }
+    
+    public function show($id){
+        $work = Work::find($id);
+        
+        
+
+        return view('works.show',['work'=> $work]);
     }
 }
