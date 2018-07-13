@@ -13,7 +13,7 @@
             </div>
         </aside>
         <div class="col-xs-10">
-            
+            <h3 class="text-center">お気に入りリスト</h3>
             @include('item.item', ['items' => $items])
             {!! $items->render() !!}
         </div>

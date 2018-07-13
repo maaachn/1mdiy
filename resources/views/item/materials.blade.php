@@ -25,7 +25,7 @@
         <div class="materials-item-wrapper col-xs-6 col-md-4">
             <a class="panel-wrapper" href="{{ route('index.flower') }}">
             <div class="panel panel-info">
-                <p>お花</p>
+                <p>花</p>
             </div>
             </a>
         </div>
@@ -49,7 +49,7 @@
         <div class="materials-item-wrapper col-xs-6 col-md-4">
             <a class="panel-wrapper" href="{{ route('index.all') }}">
             <div class="panel panel-info">
-                <p>全種類</p>
+                <p>全種類から</p>
             </div>
             </a>
         </div>

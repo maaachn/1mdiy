@@ -9,13 +9,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-left" href="/">Remaker</a>
+                <a class="navbar-left" href="/">トップページ</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     @if (Auth::check())
-                        <li><a href="{{ route('materials.get') }}">材料カテゴリー</a></li>
-
+                      
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                 <span class="gravatar">
@@ -35,9 +34,9 @@
                             </ul>
                         </li>
                     @else
-                        <li><a href="{{ route('signup.get') }}">サインアップ</a></li>
+                        <li><a href="{{ route('signup.get') }}">新規登録</a></li>
                         <li><a href="{{ route('login') }}">ログイン</a></li>
-                        <li><a href="{{ route('materials.get') }}">材料カテゴリー</a></li>
+                        
                     @endif
                 </ul>
             </div>

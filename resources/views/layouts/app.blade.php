@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>1minDIY</title>
+        <title>クラフトマン</title>
 
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -14,37 +14,98 @@
 
         <link rel="stylesheet" href="#">
         
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="cb-materialbtn.min.css">
+        
+        
+        <link rel="stylesheet" href="/dist/color/cb-materialbtn-amber.css">
+        <link rel="stylesheet" href="/dist/color/cb-materialbtn-bluegrey.css">
+        
         <style>
-            li{
-                list-style : none;
-            }
-            
-            /* item */
-.media .panel-body {
-    height: 70px;
-}
-.media .panel-heading {
-    height: 250px;
-}
-.media .panel-heading img {
-    height: 240px;
-    max-width: 240px;
-}
-
+        body {
+            font-size: 20px;
+        }
+        
+        li{
+            list-style : none;
+        }
+                    
+        /* item */
+        .media .form-body {
+            height: 70px;
+        }
+        .media .form-heading {
+            height: 250px;
+        }
+        .media .form-heading img {
+            height: 200px;
+            max-width: 300px;
+        }
+        
+        .form-group {
+            position: relative;
+           
+        }
+        
+        .media-object {
+          opacity: 1;
+          display: block;
+          width: 100%;
+          height: auto;
+          transition: .5s ease;
+          backface-visibility: hidden;
+        }
+        .media-object:hover {
+            opacity: 0.6;
+            transition: 0.7s;
+        }
+        
+        /* user */
+        .user {
+            background-image: url(background.jpg);
+        }
+        
+        /* want */
+        .btn-pink300{
+            color: #bc4e59;
+            background-color: #fff;
+            font-size: 30px;
+        }
+        
+        .btn-white{
+            color: #000;
+            background-color: #fff;
+            font-size: 30px;
+        }
+                    
+        .middle {
+          opacity: 1;
+          position: absolute;
+          top: 50%;
+          left: 80%;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          text-align: center;
+        }
         </style>
     </head>
     
     
     <body>
-        @include('commons.navbar')  
-
-        @yield('cover')
-
-        <div class="container">
-            @include('commons.error_messages')
-            @yield('content')
-        </div>
-
+        <header>
+            @include('commons.navbar')  
+        </header>
+        <main>
+            <div>
+                @yield('cover')
+            </div>
+            <div class="container">
+                @include('commons.error_messages')
+                @yield('content')
+            </div>
+        </main>
+        <footer>
         @include('commons.footer')
+        </footer>
     </body>
 </html>

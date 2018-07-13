@@ -15,7 +15,7 @@ class ItemsController extends Controller
     
     public function bin(){
             
-        $items = \DB::table('items')->select('items.*')->where('m_type', 'びん')->paginate(10);
+        $items = \DB::table('items')->select('items.*')->where('m_type', 'びん')->paginate(9);
 
         return view('item.index',[
             'items' => $items,
@@ -24,7 +24,7 @@ class ItemsController extends Controller
     
     public function box(){
             
-        $items = \DB::table('items')->select('items.*')->where('m_type', '箱')->paginate(10);
+        $items = \DB::table('items')->select('items.*')->where('m_type', '箱')->paginate(9);
 
         return view('item.index',[
             'items' => $items,
@@ -33,7 +33,7 @@ class ItemsController extends Controller
     
     public function flower(){
             
-        $items = \DB::table('items')->select('items.*')->where('m_type', '花')->paginate(10);
+        $items = \DB::table('items')->select('items.*')->where('m_type', '花')->paginate(9);
 
         return view('item.index',[
             'items' => $items,
@@ -42,7 +42,7 @@ class ItemsController extends Controller
     
     public function cardboard(){
             
-        $items = \DB::table('items')->select('items.*')->where('m_type', '段ボール')->paginate(10);
+        $items = \DB::table('items')->select('items.*')->where('m_type', '段ボール')->paginate(9);
 
         return view('item.index',[
             'items' => $items,
@@ -51,7 +51,7 @@ class ItemsController extends Controller
     
     public function others(){
             
-        $items = \DB::table('items')->select('items.*')->where('m_type', 'その他')->paginate(10);
+        $items = \DB::table('items')->select('items.*')->where('m_type', 'その他')->paginate(9);
 
         return view('item.index',[
             'items' => $items,
@@ -60,7 +60,7 @@ class ItemsController extends Controller
 
     public function index(){
         
-        $items = Item::paginate(10);
+        $items = Item::paginate(9);
 
         return view('item.index',[
             'items' => $items,
