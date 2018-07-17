@@ -20,6 +20,7 @@
                     @if (\Auth::check())
                     <div class="form-footer text-center middle">
                          @include('item.want_button', ['item' => $item])
+                         @include('item.delete_button', ['item' => $item])
                     </div>
                     @endif
                 

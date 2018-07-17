@@ -17,6 +17,7 @@
                         <div class="panel-body">
                             @if(Auth::check())
                                 @include('item.want_button', ['item' => $item])
+                                @include('item.delete_button', ['item' => $item])
                             @endif
                         </div>
                     </div>

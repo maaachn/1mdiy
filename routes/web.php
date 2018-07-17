@@ -33,8 +33,10 @@ Route::get('show/{id}', 'ItemsController@show')->name('show.get');
 Route::post('want/{id}', 'UsersController@store')->name('user.want');
 Route::delete('dont_want/{id}', 'UsersController@destroy')->name('user.dont_want');
 
-
-
+//ユーザー投稿機能,ユーザー投稿ページ,ユーザー投稿詳細ページ
+Route::get('works/create', 'ItemsController@create')->name('works.create');
+Route::post('works', 'ItemsController@store')->name('works.store');
+Route::delete('works/{id}', 'ItemsController@destroy')->name('works.destroy');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('users', 'UsersController', ['only' => ['index', 'show']]);
@@ -49,7 +51,7 @@ Route::group(['middleware' => 'auth'], function () {
         // Route::delete('unfav', 'UserFavController@destroy')->name('user.unfav');
         // Route::get('favorites', 'UsersController@favorites')->name('users.favorites');
     });
-    //ユーザー投稿機能,ユーザー投稿ページ,ユーザー投稿詳細ページ
-    Route::resource('works', 'WorksController');
+    
+    
     
 });

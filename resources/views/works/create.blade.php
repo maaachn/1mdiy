@@ -17,7 +17,14 @@
             </div>
             <div class="form-group">    
                 {!! Form::label('name', '主な材料') !!}
-                {!! Form::select('m_type', ['びん','空き箱','お花','段ボール','その他'], ['class' => 'form-control', 'rows' => '2']) !!}
+                {!! Form::select('m_type', [
+                'びん' => 'びん',
+                '空き箱' => '空き箱',
+                '花' => '花',
+                '段ボール' => '段ボール',
+                'その他' => 'その他'
+                ], 
+                ['class' => 'form-control', 'rows' => '2']) !!}
             </div>
             <div class="form-group">    
                 {!! Form::label('name', '材料1') !!}
@@ -84,9 +91,8 @@
             </div>
         {!! Form::close() !!}
     @endif
-    @if (count($works) > 0)
+    
          <div class="form-group">
-            @include('works.works', ['works' => $works])
+            @include('item.item', ['items' => $items])
         </div>
-    @endif
 @endsection

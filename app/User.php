@@ -35,7 +35,7 @@ class User extends Authenticatable
     
     //ユーザー投稿用のHasManyファンクション
     public function works(){
-        return $this->hasMany(Work::class);
+        return $this->hasMany(Item::class);
     }
 
     public function want_items()
