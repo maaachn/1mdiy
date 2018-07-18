@@ -44,6 +44,6 @@ Route::group(['middleware' => 'auth'], function () {
     
     //口コミ（コメント）機能
     Route::get('comment','CommentsController@index')->name('comments.index');
-    Route::post('comment/{id}','CommentsController@store')->name('comments.store');
+    Route::post('comment/{itemId}','CommentsController@store')->name('comments.store');
     Route::delete('comment/{id}','CommentsController@destroy')->name('comments.destroy');
 });
