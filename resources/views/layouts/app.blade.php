@@ -87,6 +87,21 @@
           -ms-transform: translate(-50%, -50%);
           text-align: center;
         }
+        
+/*test*/
+main {
+    height: 1260px;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+ 
+main video {
+    margin: 0 auto;
+    z-index: 1;
+    width: 100%;
+}
         </style>
     </head>
     
@@ -96,6 +111,10 @@
             @include('commons.navbar')  
         </header>
         <main>
+
+<video autoplay loop poster="backgroung.jpg" id="bgvid">
+<source src="test.mp4" type="video/mp4">
+</video>
             <div>
                 @yield('cover')
             </div>
