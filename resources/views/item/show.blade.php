@@ -53,9 +53,15 @@
 　　                <li>{{ $item->tool4 }}</li>
 　　                <li>{{ $item->tool5 }}</li>
 　                </ul>
+　                
+　                <h2>口コミ一覧</h2>
                 
-               
-                 
+                    <div class="text-center">
+                        @include('item.comment', ['comments' => $comments])
+                    </div>
+                
+                </div>
+
             </div>
         </div>
     </div>
