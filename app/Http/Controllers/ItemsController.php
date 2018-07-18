@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use \App\Item; //add
+use \App\Comment; //add
 
 class ItemsController extends Controller
 {
@@ -75,13 +76,12 @@ class ItemsController extends Controller
         if($item == null) {
             return redirect('/');
         }
-        // $want_users = $item->want_users;
-       
+        
+       $comments = Comment::paginate(7);
 
       return view('item.show', [
           'item' => $item,
-        //   'want_users' => $want_users,
-       
+          'comments'=>$comments,
       ]);
     }
     

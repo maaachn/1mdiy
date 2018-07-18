@@ -33,25 +33,17 @@ Route::get('show/{id}', 'ItemsController@show')->name('show.get');
 Route::post('want/{id}', 'UsersController@store')->name('user.want');
 Route::delete('dont_want/{id}', 'UsersController@destroy')->name('user.dont_want');
 
-//ユーザー投稿機能,ユーザー投稿ページ,ユーザー投稿詳細ページ
-Route::get('works/create', 'ItemsController@create')->name('works.create');
-Route::post('works', 'ItemsController@store')->name('works.store');
-Route::delete('works/{id}', 'ItemsController@destroy')->name('works.destroy');
+
 
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('users', 'UsersController', ['only' => ['index', 'show']]);
-   
-    Route::group(['prefix' => 'users/{id}'], function () {
-        // Route::post('follow', 'UserFollowController@store')->name('user.follow');
-        // Route::delete('unfollow', 'UserFollowController@destroy')->name('user.unfollow');
-        // Route::get('followings', 'UsersController@followings')->name('users.followings');
-        // Route::get('followers', 'UsersController@followers')->name('users.followers');
+   //ユーザー投稿機能,ユーザー投稿ページ,ユーザー投稿詳細ページ
+    Route::get('works/create', 'ItemsController@create')->name('works.create');
+    Route::post('works', 'ItemsController@store')->name('works.store');
+    Route::delete('works/{id}', 'ItemsController@destroy')->name('works.destroy');
     
-        // Route::post('fav', 'UserFavController@store')->name('user.fav');
-        // Route::delete('unfav', 'UserFavController@destroy')->name('user.unfav');
-        // Route::get('favorites', 'UsersController@favorites')->name('users.favorites');
-    });
-    
-    
-    
+    //口コミ（コメント）機能
+    Route::get('comment','CommentsController@index')->name('comments.index');
+    Route::post('comment/{itemId}','CommentsController@store')->name('comments.store');
+    Route::delete('comment/{id}','CommentsController@destroy')->name('comments.destroy');
 });
