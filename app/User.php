@@ -37,6 +37,11 @@ class User extends Authenticatable
     public function works(){
         return $this->hasMany(Item::class);
     }
+    
+    //comment投稿用のHasManyファンクション
+    public function comments(){
+        return $this->hasMany(Comment::class);
+    }
 
     public function want_items()
     {

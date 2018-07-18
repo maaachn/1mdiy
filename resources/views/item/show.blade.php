@@ -54,8 +54,12 @@
 　　                <li>{{ $item->tool5 }}</li>
 　                </ul>
                 
-               
-                 
+                    <div class="text-center">
+                        @include('item.comment', ['comments' => $comments])
+                    </div>
+                
+                </div>
+
             </div>
         </div>
     </div>

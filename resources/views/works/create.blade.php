@@ -2,7 +2,7 @@
 
 @section('content')
     @if (Auth::user()->id == $user->id)
-        {!! Form::open(['route' => 'works.store']) !!}
+        {!! Form::open(['route' => ['works.store']) !!}
             <div class="form-group">
                 {!! Form::label('name', '作品名') !!}
                 {!! Form::text('name', old('name'), ['class' => 'form-control']) !!}
