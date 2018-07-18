@@ -35,14 +35,39 @@
 　           　 
 　           　 
 　                <h2>作り方</h2>
-　                
-　                <ul>
-　　                <li>{{ $item->recipe1 }}</li>
-　　                <li>{{ $item->recipe2 }}</li>
-　　                <li>{{ $item->recipe3 }}</li>
-　　                <li>{{ $item->recipe4 }}</li>
-　　                <li>{{ $item->recipe5 }}</li>
-　                </ul>
+
+<div class="row">
+
+<div class="media">    
+        <div class="status text-center">
+               
+            <div class="form-group col-xs-4">
+                    <div class="form-heading text-center"><img src='{{ secure_asset($process->process1) }}' alt=''></div>
+                    <div class="form-body text-center"><p>{{ $item->recipe1 }}</p></div>
+            </div>
+             <div class="form-group col-xs-4">
+                    <div class="form-heading text-center"><img src='{{ secure_asset($process->process2) }}' alt=''></div>
+                    <div class="form-body text-center"><p>{{ $item->recipe2 }}</p></div>
+            </div>
+             <div class="form-group col-xs-4">
+                    <div class="form-heading text-center"><img src='{{ secure_asset($process->process3) }}' alt=''></div>
+                    <div class="form-body text-center"><p>{{ $item->recipe3 }}</p></div>
+            </div>
+             <div class="form-group col-xs-4">
+                    <div class="form-heading text-center"><img src='{{ secure_asset($process->process4) }}' alt=''></div>
+                    <div class="form-body text-center"><p>{{ $item->recipe4 }}</p></div>
+            </div>
+             <div class="form-group col-xs-4">
+                    <div class="form-heading text-center"><img src='{{ secure_asset($process->process5) }}' alt=''></div>
+                    <div class="form-body text-center"><p>{{ $item->recipe5 }}</p></div>
+            </div>
+        </div>
+    
+</div>
+</div>
+
+
+</div>　         
 　                
 　                <h2>必要な道具</h2>
 　                

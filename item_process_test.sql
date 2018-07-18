@@ -1,0 +1,2 @@
+
+INSERT INTO 1mdiy.item_process (item_id, process1, process2, process3, process4, process5) VALUES (15,'item_photo/binhoukouzai/houkouzai01.jpg','item_photo/binhoukouzai/houkouzai02.jpg','item_photo/binhoukouzai/houkouzai03.jpg','item_photo/binhoukouzai/houkouzai04.jpg','');

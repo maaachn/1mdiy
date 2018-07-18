@@ -14,12 +14,7 @@
 
         <link rel="stylesheet" href="#">
         
-        <link rel="stylesheet" href="bootstrap.min.css">
-        <link rel="stylesheet" href="cb-materialbtn.min.css">
-        
-        
-        <link rel="stylesheet" href="/dist/color/cb-materialbtn-amber.css">
-        <link rel="stylesheet" href="/dist/color/cb-materialbtn-bluegrey.css">
+       
         
         <style>
         body {
@@ -38,6 +33,11 @@
             height: 250px;
         }
         .media .form-heading img {
+            height: 200px;
+            max-width: 300px;
+        }
+        
+         .media .form-body img {
             height: 200px;
             max-width: 300px;
         }
@@ -88,20 +88,7 @@
           text-align: center;
         }
         
-/*test*/
-main {
-    height: 1260px;
-    background-size: cover;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
- 
-main video {
-    margin: 0 auto;
-    z-index: 1;
-    width: 100%;
-}
+
         </style>
     </head>
     
@@ -112,9 +99,6 @@ main video {
         </header>
         <main>
 
-<video autoplay loop poster="backgroung.jpg" id="bgvid">
-<source src="test.mp4" type="video/mp4">
-</video>
             <div>
                 @yield('cover')
             </div>
