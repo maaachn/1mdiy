@@ -14,9 +14,9 @@ class ItemsController extends Controller
     }
     
     public function bin(){
-            
+        
         $items = \DB::table('items')->select('items.*')->where('m_type', 'びん')->paginate(9);
-
+        
         return view('item.index',[
             'items' => $items,
             ]);
@@ -72,14 +72,17 @@ class ItemsController extends Controller
     public function show($id){
         
         $item = Item::find($id);
+        $process = \DB::table('item_process')->where('item_id',$id)->first();
+        
         if($item == null) {
             return redirect('/');
         }
-        // $want_users = $item->want_users;
+        $want_users = $item->want_users;
        
 
       return view('item.show', [
           'item' => $item,
+          'process' => $process,
         //   'want_users' => $want_users,
        
       ]);
