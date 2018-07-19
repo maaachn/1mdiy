@@ -46,6 +46,8 @@
             <div class="form-group col-xs-4">
                 @if(isset($process))
                     <div class="form-heading text-center"><img src='{{ secure_asset($process->process1) }}' alt=''></div>
+                @else
+                    <div class="form-heading text-center"><img src="/coming.jpg" alt=''></div>
                 @endif
                     <div class="form-body text-center"><p>{{ $item->recipe1 }}</p></div>
             </div>
