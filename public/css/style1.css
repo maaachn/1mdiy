@@ -1,0 +1,114 @@
+#auth { 
+  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+  font-weight:100; 
+  background: rgba(170,170,0,0.5);
+  color: white;
+  padding: 2rem;
+  height:100%;
+  width: 33%;
+  margin:2rem;
+  float: left;
+  font-size: 2rem;
+  position: relative;
+  top: 30px;
+}
+
+#auth .title h1{
+  font-size: 10rem;
+  color:rgba(200,0,0,5);
+  border:0;
+  margin:0;
+  padding:0;
+}
+#auth .title p{
+  font-size: 3rem;
+  color: #000;
+  border:0;
+  margin:0;
+  padding:0;
+}
+
+#auth .title{
+  -webkit-text-stroke: 4px #000;
+}
+
+.subtitle{
+  color: #000;
+}
+
+#auth button { 
+  display: block;
+  width: 80%;
+  padding: .4rem;
+  border: none; 
+  margin: 1rem auto; 
+  font-size: 1.3rem;
+  background: rgba(255,255,255,0.23);
+  color: #fff;
+  border-radius: 3px; 
+  cursor: pointer;
+  transition: .3s background;
+}
+#auth button:hover { 
+   background: rgba(0,0,0,0.5);
+}
+
+@media screen and (max-width: 500px) { 
+  div{width:70%;} 
+}
+@media screen and (max-device-width: 800px) {
+  html { background: url(https://thenewcode.com/assets/images/polina.jpg) #000 no-repeat center center fixed; }
+  #bgvid { display: none; }
+}
+
+video { 
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-0%);
+ background-size: cover;
+  transition: 1s opacity;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  max-height: 100%;
+}
+
+
+/*body {*/
+/*background-repeat: repeat;*/
+/*background-attachment: fixed;*/
+/*background-position: right bottom;*/
+/*}*/
+
+.navbar {
+    background-color: rgba(170,170,0,0.5)	;
+    color: #006600;
+}
+
+body{
+  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+}
+
+.bin{
+  background-image: url('image3.jpg');
+}
+.materials-item-wrapper{
+  background-image: url("image3.jpg");
+}
+.panel{
+  background-image: url("image3.jpg");
+}
+.bin:hover{
+  
+}
