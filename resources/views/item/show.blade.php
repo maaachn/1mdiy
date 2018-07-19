@@ -42,23 +42,33 @@
         <div class="status text-center">
                
             <div class="form-group col-xs-4">
+                @if(isset($process))
                     <div class="form-heading text-center"><img src='{{ secure_asset($process->process1) }}' alt=''></div>
+                @endif
                     <div class="form-body text-center"><p>{{ $item->recipe1 }}</p></div>
             </div>
              <div class="form-group col-xs-4">
+                @if(isset($process))
                     <div class="form-heading text-center"><img src='{{ secure_asset($process->process2) }}' alt=''></div>
+                @endif
                     <div class="form-body text-center"><p>{{ $item->recipe2 }}</p></div>
             </div>
              <div class="form-group col-xs-4">
+                @if(isset($process))
                     <div class="form-heading text-center"><img src='{{ secure_asset($process->process3) }}' alt=''></div>
+                @endif
                     <div class="form-body text-center"><p>{{ $item->recipe3 }}</p></div>
             </div>
              <div class="form-group col-xs-4">
+                @if(isset($process))
                     <div class="form-heading text-center"><img src='{{ secure_asset($process->process4) }}' alt=''></div>
+                @endif
                     <div class="form-body text-center"><p>{{ $item->recipe4 }}</p></div>
             </div>
              <div class="form-group col-xs-4">
+                @if(isset($process))
                     <div class="form-heading text-center"><img src='{{ secure_asset($process->process5) }}' alt=''></div>
+                @endif
                     <div class="form-body text-center"><p>{{ $item->recipe5 }}</p></div>
             </div>
         </div>

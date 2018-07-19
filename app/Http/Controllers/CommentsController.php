@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use \App\Item; //add
+use \App\User; //add
 use \App\Comment; //add
 
 class CommentsController extends Controller

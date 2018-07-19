@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use \App\Item; //add
+use \App\User; //add
 use \App\Comment; //add
 
 class ItemsController extends Controller
