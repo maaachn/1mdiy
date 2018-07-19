@@ -37,6 +37,12 @@
             max-width: 300px;
         }
         
+        /*詳細ページ完成イメージ*/
+        .showimg {
+            height: 400px;
+            max-width: 600px; 
+        }
+        
          .media .form-body img {
             height: 200px;
             max-width: 300px;

@@ -10,9 +10,9 @@
                 
                 
                 <div class="row">
-                    <div class="panel col-xs-6">
+                    <div class="panel panel-default col-xs-6">
                         <div class="panel-heading">
-                            <img src="{{ $item->image_url }}">
+                            <img class="showimg" src="{{ secure_asset($item->image_url) }}">
                         </div>
                         <div class="panel-body">
                             @if(Auth::check())
@@ -21,17 +21,19 @@
                             @endif
                         </div>
                     </div>
-                </div>        
                         
-                <h2>材料</h2>
-                
-　                <ul>
-　　                <li>{{ $item->material1 }}</li>
-　　                <li>{{ $item->material2 }}</li>
-　　                <li>{{ $item->material3 }}</li>
-　　                <li>{{ $item->material4 }}</li>
-　　                <li>{{ $item->material5 }}</li>
-　                </ul>
+                    <div class="panel panel-default col-xs-offset-1 col-xs-5">    
+                        <h2>材料</h2>
+                        
+        　                <ul>
+        　　                <li>{{ $item->material1 }}</li>
+        　　                <li>{{ $item->material2 }}</li>
+        　　                <li>{{ $item->material3 }}</li>
+        　　                <li>{{ $item->material4 }}</li>
+        　　                <li>{{ $item->material5 }}</li>
+        　                </ul>
+    　               </div> 
+    　           </div>     
 　           　 
 　           　 
 　                <h2>作り方</h2>
