@@ -60,10 +60,9 @@
             transition: 0.7s;
         }
         
-        /* user */
-        .user {
-            background-image: url(background.jpg);
-        }
+       
+       
+        
         
         /* want */
         .btn-pink300{
@@ -87,7 +86,11 @@
           -ms-transform: translate(-50%, -50%);
           text-align: center;
         }
+        
+        
+        
         </style>
+        
     </head>
     
     
