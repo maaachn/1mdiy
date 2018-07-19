@@ -13,6 +13,8 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
         <link rel="stylesheet" href="#">
+        <link rel="stylesheet" href="css/style1.css">
+
         
        
         
@@ -93,6 +95,22 @@
           -ms-transform: translate(-50%, -50%);
           text-align: center;
         }
+        
+        
+.cover{
+
+    background-size: cover;
+    text-align: center;
+    position: relative;
+    /*overflow: hidden;*/
+}
+ 
+.cover video {
+    margin: 0 auto;
+    z-index: 1;
+    width: 100%;
+}
+
         
 
         </style>
