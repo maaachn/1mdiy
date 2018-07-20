@@ -8,7 +8,7 @@
                     <div class="main-movie clearfix">
                         <video poster="" id="bgvid" playsinline autoplay muted loop>
                      
-                        <source src="toppagetest8.mp4" type="video/mp4">
+                        <source src="toppagetest11.mp4" type="video/mp4">
                         
                         </video>
                        
@@ -21,7 +21,7 @@
                             </div>
                             <div class="subtitle">
                                 <p>家にあるもので職人になれちゃう！？</p>
-                                <a href="{{ route('materials.get') }}" class="btn btn-warning btn-lg">☛今すぐ始める！
+                                <a href="{{ route('materials.get') }}"><img src="top.png"  alt="アイコン">
                                 </a>
                                 <br>
                                 <br>
