@@ -11,6 +11,8 @@ use \App\Comment; //add
 
 class ItemsController extends Controller
 {
+    
+////////////////////////材料カテゴリ/////////////////////////////
     public function materials(){
         return view('item.materials');
     }
@@ -69,7 +71,68 @@ class ItemsController extends Controller
             ]);
     }
     
+/////////////////////////完成品カテゴリ/////////////////////////////////
+    
+    public function usages(){
+        return view('item.usages');
+    }
+    
+    public function aroma(){
+        
+        $items = \DB::table('items')->select('items.*')->where('u_type', 'アロマ')->paginate(9);
+        
+        return view('item.index',[
+            'items' => $items,
+            ]);
+    }
+    
+    public function cover(){
             
+        $items = \DB::table('items')->select('items.*')->where('u_type', 'カバー')->paginate(9);
+
+        return view('item.index',[
+            'items' => $items,
+            ]);
+    }
+    
+    public function light(){
+            
+        $items = \DB::table('items')->select('items.*')->where('u_type', '照明')->paginate(9);
+
+        return view('item.index',[
+            'items' => $items,
+            ]);
+    }
+    
+    public function interior(){
+            
+        $items = \DB::table('items')->select('items.*')->where('u_type', 'インテリア')->paginate(9);
+
+        return view('item.index',[
+            'items' => $items,
+            ]);
+    }    
+    
+
+    public function storage(){
+        
+        $items = \DB::table('items')->select('items.*')->where('u_type', '収納')->paginate(9);
+
+        return view('item.index',[
+            'items' => $items,
+            ]);
+    }
+    
+    public function u_others(){
+            
+        $items = \DB::table('items')->select('items.*')->where('u_type', 'その他')->paginate(9);
+
+        return view('item.index',[
+            'items' => $items,
+            ]);
+    }
+    
+///////////////////////////////////////////////////////////////////
     
     public function show($id){
         
@@ -98,6 +161,7 @@ class ItemsController extends Controller
             'content' => 'required|max:191',
             'image_url' => 'required|max:191',
             'm_type' => 'required|max:191',
+            'u_type' => 'required|max:191',
             'material1' => 'required|max:191',
             'material2' => 'max:191',
             'material3' => 'max:191',
@@ -123,6 +187,7 @@ class ItemsController extends Controller
             'content' => $request->content,
             'image_url' => $request->image_url,
             'm_type' => $request->m_type,
+            'u_type' => $request->u_type,
             'material1' => $request->material1,
             'material2' => $request->material2,
             'material3' => $request->material3,
