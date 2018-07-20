@@ -31,6 +31,7 @@
                              <div class="auth-button">    
                                 @if (!Auth::check())
                                     <p>登録・ログインはこちら</p>
+                                    <p>登録して自分だけのクラフトを投稿しよう！</p>
                                     <a href="{{ route('signup.get') }}" class="btn btn-success btn-lg">新規登録</a>
                                     <a href="{{ route('login.post') }}" class="btn btn-primary btn-lg">ログイン</a>
                                 @else 
