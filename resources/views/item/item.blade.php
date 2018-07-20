@@ -9,7 +9,7 @@
                 <a href="{{route('show.get',['id' => $item->id])}}">
                     <div class="form-heading text-center">
                         <div class="media-center">
-                            <img class="media-object img-rounded center-block" src="{{ $item->image_url }}" alt="">
+                            <img class="media-object img-rounded center-block" src="{{ secure_asset($item->image_url) }}" alt="">
                         </div>
                     </div>
                     <div class="form-body text-center">
