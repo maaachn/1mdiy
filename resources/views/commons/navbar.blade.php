@@ -1,5 +1,5 @@
 <header>
-    
+
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
@@ -33,6 +33,35 @@
                                 </li>
                                 <li>
                                     <a href="{{ route('index.others') }}">その他</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('index.all') }}">全種類</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                用途から探す
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="{{ route('index.aroma') }}">アロマ</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('index.cover') }}">カバー・ケース</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('index.light') }}">照明</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('index.interior') }}">インテリア</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('index.storage') }}">収納</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('index.u_others') }}">その他</a>
                                 </li>
                                 <li>
                                     <a href="{{ route('index.all') }}">全種類</a>

@@ -20,14 +20,27 @@ Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login')->name('login.post');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 
-Route::get('materials', 'ItemsController@materials')->name('materials.get');
+
     //材料カテゴリー
+    Route::get('materials', 'ItemsController@materials')->name('materials.get');
+    
     Route::get('bin', 'ItemsController@bin')->name('index.bin');
     Route::get('box', 'ItemsController@box')->name('index.box');
     Route::get('flower', 'ItemsController@flower')->name('index.flower');
     Route::get('cardboard', 'ItemsController@cardboard')->name('index.cardboard');
     Route::get('others', 'ItemsController@others')->name('index.others');
     Route::get('index', 'ItemsController@index')->name('index.all');
+    
+    //完成品カテゴリ
+    Route::get('usages', 'ItemsController@usages')->name('usages.get');
+
+    Route::get('aroma', 'ItemsController@aroma')->name('index.aroma');
+    Route::get('cover', 'ItemsController@cover')->name('index.cover');
+    Route::get('light', 'ItemsController@light')->name('index.light');
+    Route::get('interior', 'ItemsController@interior')->name('index.interior');
+    Route::get('storage', 'ItemsController@storage')->name('index.storage');
+    Route::get('u_others', 'ItemsController@u_others')->name('index.u_others');
+    
 Route::get('show/{id}', 'ItemsController@show')->name('show.get');
 
 Route::post('want/{id}', 'UsersController@store')->name('user.want');

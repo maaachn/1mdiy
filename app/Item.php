@@ -12,6 +12,7 @@ class Item extends Model
         'content', 
         'image_url',
         'm_type',
+        'u_type',
         'material1',
         'material2',
         'material3',

@@ -50,10 +50,7 @@
             max-width: 300px;
         }
         
-        .form-group {
-            position: relative;
-           
-        }
+       
         
         .media-object {
           opacity: 1;
@@ -97,7 +94,7 @@
         }
         
         
-.cover{
+.main-movie{
 
     background-size: cover;
     text-align: center;
@@ -105,22 +102,25 @@
     /*overflow: hidden;*/
 }
  
-.cover video {
+.main-movie video {
     margin: 0 auto;
     z-index: 1;
     width: 100%;
 }
 
-        
+.navbar {
+    background-color: rgba(170,170,0,0.5)	;
+    color: #006600;
+}
+
+ 
 
         </style>
     </head>
     
     
     <body>
-        <header>
-            @include('commons.navbar')  
-        </header>
+      @include('commons.navbar')  
         <main>
 
             <div>
@@ -131,8 +131,6 @@
                 @yield('content')
             </div>
         </main>
-        <footer>
         @include('commons.footer')
-        </footer>
     </body>
 </html>
