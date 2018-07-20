@@ -2,5 +2,5 @@
 		 event.preventDefault();
 	 
 	 $('form').fadeOut(500);
-	 $('.wrapper').addClass('form-success');
+	 $('body').addClass('form-success');
 });

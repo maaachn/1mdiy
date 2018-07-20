@@ -1,66 +1,22 @@
 @extends('layouts.app')
 
-@section('content')
 <link rel="stylesheet" type="text/css" href="css/login_signup.css">
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="/login_signup.js"></script>
+
+@section('content')
 <div class="row">
-    <div class="wrapper">
-	<div class="container">
+	<div class="logsign">
 		<h1>Welcome</h1>
 		
+	{!!Form::open() !!}
 		<form class="form">
-			<input type="text" placeholder="Username">
-			<input type="password" placeholder="Password">
-			<button type="submit" id="login-button">Login</button>
+			<input type="text" name="name" placeholder="Name" value="">
+		<br>
+			<input type="password" name="password" placeholder="Password" value="">
+		<br>	
+			<a href="{{route('login.post')}}"><button type="submit" id="login-button">Login</button></a>
 		</form>
-	</div>
+	{!! Form::close() !!}
 	
-	<ul class="bg-bubbles">
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-	</ul>
-</div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <!--<div class="col-xs-offset-2 col-xs-8">-->
-    <!--    <div class="panel panel-default user">-->
-    <!--        <div class="panel-heading text-center">ログイン</div>-->
-    <!--        <div class="panel-body">-->
-              
-    <!--            {!! Form::open() !!}-->
-    <!--                <div class="form-group">-->
-    <!--                    {!! Form::label('name', 'お名前') !!}-->
-    <!--                   <input class="field form-control" name="name" type="text" value="">-->
-    <!--                </div>-->
-    <!--                <br>-->
-    <!--                <div class="form-group">-->
-    <!--                    {!! Form::label('password', 'パスワード') !!}-->
-    <!--                    {!! Form::password('password', ['class' => 'form-control']) !!}-->
-    <!--                </div>-->
-    <!--                <br>-->
-    <!--                <div class="text-center">-->
-    <!--                    {!! Form::submit('ログイン', ['class' => 'btn btn-success']) !!}-->
-    <!--                </div>-->
-    <!--            {!! Form::close() !!}-->
-    <!--        </div>-->
-    <!--    </div>-->
-    <!--</div>-->
-</div>
+</div>	
 @endsection
