@@ -12,11 +12,12 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+
         <link rel="stylesheet" href="css/style2.css">
         <link rel="stylesheet" href="css/style1.css">
 
         
-       
+      
         
         <style>
         body {
@@ -65,10 +66,12 @@
             transition: 0.7s;
         }
         
-        /* user */
-        .user {
-            background-image: url(background.jpg);
-        }
+        /*user*/
+        
+        
+       
+       
+        
         
         /* want */
         .btn-pink300{
@@ -94,6 +97,7 @@
         }
         
         
+
 .main-movie{
 
     background-size: cover;
@@ -115,7 +119,9 @@
 
  
 
+
         </style>
+       
     </head>
     
     
@@ -131,6 +137,8 @@
                 @yield('content')
             </div>
         </main>
+
         @include('commons.footer')
+
     </body>
 </html>
