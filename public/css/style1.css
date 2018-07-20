@@ -97,18 +97,37 @@ video {
 }
 
 body{
-  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+  font-family: "Arial Black" "ヒラギノ角ゴ ProN" ;
 }
 
 .bin{
-  background-image: url('image3.jpg');
+  background-image: url("/bin.jpg");
+  border: 1px solid #CCC;
+  height: 300px;
+  margin:0;
+  padding:0;
 }
-.materials-item-wrapper{
-  background-image: url("image3.jpg");
-}
-.panel{
-  background-image: url("image3.jpg");
-}
-.bin:hover{
+/*.materials-item-wrapper{*/
+/*  background-image: url("image3.jpg");*/
+/*}*/
+/*.panel{*/
+/*  background-image: url(image3.jpg);*/
+/*}*/
+.bin:hover:after{
+  background-color: rgba(0,100,0,0.5);
+  height:300px;
+  opacity: 0.5;
+  content: "Bin";
+  display:block;
+  position:center;
+  text-align:center;
+  color:#fff;
+  font-size:7rem;
+  font-style:none;
+  transition-duration: 0.5s;
   
+}
+
+.bigfont{
+  font-size:3rem;
 }
