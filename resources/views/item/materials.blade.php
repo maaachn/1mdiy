@@ -15,53 +15,48 @@
             </div>
         </div>
         
-        <div class="box">
+        <div class="">
             <div class="materials-item-wrapper col-xs-4">
-                <a class="panel-wrapper" href="{{ route('index.box') }}">
-                <div class="panel panel-info">
-                    <p>空き箱</p>
-                </div>
-                </a>
+                <a class="" href="{{ route('index.box') }}">
+                    <div class="box">
+                    </div>
+                </a> 
             </div>
         </div>
         
-        <div class="flower">
+        <div class="">
             <div class="materials-item-wrapper col-xs-4">
-                <a class="panel-wrapper" href="{{ route('index.flower') }}">
-                <div class="panel panel-info">
-                    <p>お花</p>
-                </div>
-                </a>
+                <a class="" href="{{ route('index.flower') }}">
+                    <div class="flower">
+                    </div>
+                </a> 
             </div>
         </div>
         
-        <div class="cardboard">
+        <div class="">
             <div class="materials-item-wrapper col-xs-4">
-                <a class="panel-wrapper" href="{{ route('index.cardboard') }}">
-                <div class="panel panel-info">
-                    <p>段ボール</p>
-                </div>
-                </a>
+                <a class="" href="{{ route('index.cardboard') }}">
+                    <div class="cardboard">
+                    </div>
+                </a> 
             </div>
         </div>
         
-        <div class="others">
+        <div class="">
             <div class="materials-item-wrapper col-xs-4">
-                <a class="panel-wrapper" href="{{ route('index.others') }}">
-                <div class="panel panel-info">
-                    <p>その他</p>
-                </div>
-                </a>
+                <a class="" href="{{ route('index.others') }}">
+                    <div class="others">
+                    </div>
+                </a> 
             </div>
         </div>
         
-        <div class="all">
+        <div class="">
             <div class="materials-item-wrapper col-xs-4">
-                <a class="panel-wrapper" href="{{ route('index.all') }}">
-                <div class="panel panel-info">
-                    <p>全種類から</p>
-                </div>
-                </a>
+                <a class="" href="{{ route('index.all') }}">
+                    <div class="all">
+                    </div>
+                </a> 
             </div>
         </div>
 </div>

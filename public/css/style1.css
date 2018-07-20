@@ -107,12 +107,7 @@ body{
   margin:0;
   padding:0;
 }
-/*.materials-item-wrapper{*/
-/*  background-image: url("image3.jpg");*/
-/*}*/
-/*.panel{*/
-/*  background-image: url(image3.jpg);*/
-/*}*/
+
 .bin:hover:after{
   background-color: rgba(0,100,0,0.5);
   height:300px;
@@ -124,8 +119,118 @@ body{
   color:#fff;
   font-size:7rem;
   font-style:none;
-  transition-duration: 0.5s;
+  transition-duration: 1s;
   
+}
+
+.box{
+  background-image: url("/box1.jpg");
+  border: 1px solid #CCC;
+  height: 300px;
+  margin:0;
+  padding:0;
+}
+
+.box:hover:after{
+  background-color: rgba(0,100,0,0.5);
+  height:300px;
+  opacity: 0.5;
+  content: "Box";
+  display:block;
+  position:center;
+  text-align:center;
+  color:#fff;
+  font-size:7rem;
+  font-style:none;
+  transition-duration: 1s;
+}
+
+.flower{
+  background-image: url("/flower1.jpg");
+  border: 1px solid #CCC;
+  height: 300px;
+  margin:0;
+  padding:0;
+}
+
+.flower:hover:after{
+  background-color: rgba(0,100,0,0.5);
+  height:300px;
+  opacity: 0.5;
+  content: "Flower";
+  display:block;
+  position:center;
+  text-align:center;
+  color:#fff;
+  font-size:7rem;
+  font-style:none;
+  transition-duration: 1s;
+}
+
+.cardboard{
+  background-image: url("/cardboard2.jpg");
+  border: 1px solid #CCC;
+  height: 300px;
+  margin:0;
+  padding:0;
+}
+
+.cardboard:hover:after{
+  background-color: rgba(0,100,0,0.5);
+  height:300px;
+  opacity: 0.5;
+  content: "Cardboard";
+  display:block;
+  position:center;
+  text-align:center;
+  color:#fff;
+  font-size:7rem;
+  font-style:none;
+  transition-duration: 1s;
+}
+
+.others{
+  background-image: url("/all1.jpg");
+  border: 1px solid #CCC;
+  height: 300px;
+  margin:0;
+  padding:0;
+}
+
+.others:hover:after{
+  background-color: rgba(0,100,0,0.5);
+  height:300px;
+  opacity: 0.5;
+  content: "others";
+  display:block;
+  position:center;
+  text-align:center;
+  color:#fff;
+  font-size:7rem;
+  font-style:none;
+  transition-duration: 1s;
+}
+
+.all{
+  background-image: url("/all3.jpg");
+  border: 1px solid #CCC;
+  height: 300px;
+  margin:0;
+  padding:0;
+}
+
+.all:hover:after{
+  background-color: rgba(0,100,0,0.5);
+  height:300px;
+  opacity: 0.5;
+  content: "All";
+  display:block;
+  position:center;
+  text-align:center;
+  color:#fff;
+  font-size:7rem;
+  font-style:none;
+  transition-duration: 1s;
 }
 
 .bigfont{
