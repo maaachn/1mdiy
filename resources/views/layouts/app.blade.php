@@ -12,14 +12,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-        <link rel="stylesheet" href="#">
-        
-        <link rel="stylesheet" href="bootstrap.min.css">
-        <link rel="stylesheet" href="cb-materialbtn.min.css">
-        
-        
-        <link rel="stylesheet" href="/dist/color/cb-materialbtn-amber.css">
-        <link rel="stylesheet" href="/dist/color/cb-materialbtn-bluegrey.css">
         
         <style>
         body {
@@ -110,8 +102,8 @@
                 @yield('content')
             </div>
         </main>
-        <footer>
+        
         @include('commons.footer')
-        </footer>
+        
     </body>
 </html>
