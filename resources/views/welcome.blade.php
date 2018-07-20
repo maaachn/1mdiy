@@ -8,7 +8,7 @@
                     <div class="main-movie clearfix">
                         <video poster="" id="bgvid" playsinline autoplay muted loop>
                      
-                        <source src="toppagetest16.mp4" type="video/mp4">
+                        <source src="usui.mp4" type="video/mp4">
                         
                         </video>
                        
@@ -19,14 +19,16 @@
                                 <p>-クラフトマン-</p>
                                 <h1>Craftsman</h1>
                             </div>
-                            <div class="subtitle">
-                                <p>家にあるもので職人になれちゃう！？</p>
-                                <a href="{{ route('materials.get') }}"><img src="top.png"  alt="アイコン">
+                        </div>
+                            
+                         <div id="auth2" class="overlay">
+                             <div class="subtitle">
+                                <a href="{{ route('materials.get') }}" class="btn btn-warning btn-lg">☞ここから始める</a>
                                 </a>
                                 <br>
                                 <br>
-                            
-                                <div class="auth-button">    
+                             </div>
+                             <div class="auth-button">    
                                 @if (!Auth::check())
                                     <p>登録・ログインはこちら</p>
                                     <a href="{{ route('signup.get') }}" class="btn btn-success btn-lg">新規登録</a>
@@ -34,8 +36,8 @@
                                 @else 
                                     <a href="{{ route('logout.get') }}" class="btn btn-danger btn-lg">ログアウト</a>
                                 @endif
-                                </div>
-                            </div>
+                             </div>
+                         </div>
                         </div>
              
                     </div>
