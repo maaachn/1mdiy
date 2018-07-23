@@ -21,6 +21,7 @@
         <style>
         body {
             font-size: 20px;
+            /*font-family: "azuki-font Regular";*/
         }
         
         li{
@@ -28,16 +29,16 @@
         }
                     
         /* item */
-        .media .form-body {
-            height: 70px;
-        }
-        .media .form-heading {
-            height: 250px;
-        }
-        .media .form-heading img {
-            height: 200px;
-            max-width: 300px;
-        }
+        /*.media .form-body {*/
+        /*    height: 70px;*/
+        /*}*/
+        /*.media .form-heading {*/
+        /*    height: 250px;*/
+        /*}*/
+        /*.media .form-heading img {*/
+        /*    height: 200px;*/
+        /*    max-width: 300px;*/
+        /*}*/
         
         /*詳細ページ完成イメージ*/
         .showimg {
@@ -97,18 +98,17 @@
         }
         
         
-.cover{
+.main-movie{
 
-    background-size: cover;
+    /*background-size: cover;*/
     text-align: center;
     position: relative;
     /*overflow: hidden;*/
 }
  
-.cover video {
+.main-movie video {
     margin: 0 auto;
     z-index: 1;
-    width: 100%;
 }
 
         

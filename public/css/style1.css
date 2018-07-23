@@ -62,13 +62,15 @@
 }
 
 video { 
-    position: fixed;
+    position: relative;
     top: 0px;
     left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
+    min-width: 80%;
+    min-height: 80%;
+    width:　auto;
     height: auto;
+    max-width:1160px;
+    max-height:860px;
     z-index: -100;
     transform: translateX(-50%) translateY(-0%);
  background-size: cover;
@@ -92,25 +94,52 @@ video {
 /*}*/
 
 .navbar {
-    background-color: rgba(170,170,0,0.5)	;
+    background-color: #fff	;
     color: #006600;
+    /*background-image: url("/bg3.jpg");*/
+    /*background-repeat: no-repeat;*/
+    /*height: 80px;*/
+}
+.navbar .container{
+    
 }
 
-body{
-  font-family: "Arial Black" "ヒラギノ角ゴ ProN" ;
+
+
+.bin img{
+  width: 100%;
+  height: 100%;
 }
 
 .bin{
-  background-image: url("/bin.jpg");
+  background-image: url("");
   border: 1px solid #CCC;
-  height: 300px;
+  height: 150px;
   margin:0;
   padding:0;
+  }
+
+.bin
+
+.bin:hover{
+  
 }
 
-.bin:hover:after{
-  background-color: rgba(0,100,0,0.5);
-  height:300px;
+/*マテリアルホバー効果*/
+.bin img {
+  -webkit-filter: sepia(0);
+  filter: sepia(0);
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+  width:100%;
+  height:100%;
+}
+
+.bin:hover img {
+  -webkit-filter: sepia(100%);
+  filter: sepia(100%);
+  
+  height:180px;
   opacity: 0.5;
   content: "Bin";
   display:block;
@@ -119,120 +148,322 @@ body{
   color:#fff;
   font-size:7rem;
   font-style:none;
-  transition-duration: 1s;
-  
+  transition-duration: .5s;
 }
 
-.box{
-  background-image: url("/box1.jpg");
-  border: 1px solid #CCC;
-  height: 300px;
-  margin:0;
-  padding:0;
+.bin {
+  margin-top: 10px;
+	height:			180px;
+	overflow:		hidden;
+	position:		relative;
+}
+.bin .caption {
+	font-size:		130%;
+	text-align: 		center;
+	color:			#fff;
+}
+.bin .hidmess {
+	width:			100%;
+	height:			100%;
+	position:		absolute;
+	top:			0;
+	left:			0;
+	opacity:		0;	/* マスクを表示しない */
+	background-color:	rgba(0,0,0,0.4);
+	-webkit-transition:	all 0.6s ease;
+	transition:		all 0.6s ease;
+}
+.bin:hover .hidmess {
+	opacity:		1;	/* マスクを表示する */
+	padding-top:		80px;	/* ホバーで下にずらす */
 }
 
-.box:hover:after{
-  background-color: rgba(0,100,0,0.5);
-  height:300px;
+.bin .hidmess .caption{
+  font-size: 5rem;
+}
+/*箱*/
+.box img {
+  -webkit-filter: sepia(0);
+  filter: sepia(0);
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+  width:100%;
+  height:100%;
+}
+
+.box:hover img {
+  -webkit-filter: sepia(100%);
+  filter: sepia(100%);
+  width:100%;
+  height:180px;
   opacity: 0.5;
-  content: "Box";
+  content: "Bin";
   display:block;
   position:center;
   text-align:center;
   color:#fff;
   font-size:7rem;
   font-style:none;
-  transition-duration: 1s;
+  transition-duration: .5s;
 }
 
-.flower{
-  background-image: url("/flower1.jpg");
-  border: 1px solid #CCC;
-  height: 300px;
-  margin:0;
-  padding:0;
+.box {
+	height:			180px;
+	overflow:		hidden;
+	position:		relative;
+	margin-top: 10px;
+}
+.box .caption {
+	font-size:		130%;
+	text-align: 		center;
+	color:			#fff;
+}
+.box:hover .hidmess {
+	opacity:		1;	/* マスクを表示する */
+	padding-top:		80px;	/* ホバーで下にずらす */
+}
+/*花*/
+.flower img {
+  -webkit-filter: sepia(0);
+  filter: sepia(0);
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+  width:100%;
+  height:100%;
 }
 
-.flower:hover:after{
-  background-color: rgba(0,100,0,0.5);
-  height:300px;
+.flower:hover img {
+  -webkit-filter: sepia(100%);
+  filter: sepia(100%);
+  width:100%;
+  height:180px;
   opacity: 0.5;
-  content: "Flower";
+  content: "Bin";
   display:block;
   position:center;
   text-align:center;
   color:#fff;
   font-size:7rem;
   font-style:none;
-  transition-duration: 1s;
+  transition-duration: .5s;
 }
 
-.cardboard{
-  background-image: url("/cardboard2.jpg");
-  border: 1px solid #CCC;
-  height: 300px;
-  margin:0;
-  padding:0;
+.flower {
+	height:			180px;
+	overflow:		hidden;
+	position:		relative;
+	margin-top: 10px;
+}
+.flower .caption {
+	font-size:		130%;
+	text-align: 		center;
+	color:			#fff;
+}
+.flower:hover .hidmess {
+	opacity:		1;	/* マスクを表示する */
+	padding-top:		80px;	/* ホバーで下にずらす */
+}
+/*段ボール*/
+.cardboard img {
+  -webkit-filter: sepia(0);
+  filter: sepia(0);
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+  width:100%;
+  height:100%;
 }
 
-.cardboard:hover:after{
-  background-color: rgba(0,100,0,0.5);
-  height:300px;
+.cardboard:hover img {
+  -webkit-filter: sepia(100%);
+  filter: sepia(100%);
+  width:100%;
+  height:180px;
   opacity: 0.5;
-  content: "Cardboard";
+  content: "Bin";
   display:block;
   position:center;
   text-align:center;
   color:#fff;
   font-size:7rem;
   font-style:none;
-  transition-duration: 1s;
+  transition-duration: .5s;
 }
 
-.others{
-  background-image: url("/all1.jpg");
-  border: 1px solid #CCC;
-  height: 300px;
-  margin:0;
-  padding:0;
+.cardboard {
+	height:			180px;
+	overflow:		hidden;
+	position:		relative;
+	margin-top: 10px;
+}
+.cardboard .caption {
+	font-size:		130%;
+	text-align: 		center;
+	color:			#fff;
+}
+.cardboard:hover .hidmess {
+	opacity:		1;	/* マスクを表示する */
+	padding-top:		80px;	/* ホバーで下にずらす */
+}
+/*その他*/
+.others img {
+  -webkit-filter: sepia(0);
+  filter: sepia(0);
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+  width:100%;
+  height:100%;
 }
 
-.others:hover:after{
-  background-color: rgba(0,100,0,0.5);
-  height:300px;
+.others:hover img {
+  -webkit-filter: sepia(100%);
+  filter: sepia(100%);
+  width:100%;
+  height:180px;
   opacity: 0.5;
-  content: "others";
+  content: "Bin";
   display:block;
   position:center;
   text-align:center;
   color:#fff;
   font-size:7rem;
   font-style:none;
-  transition-duration: 1s;
+  transition-duration: .5s;
 }
 
-.all{
-  background-image: url("/all3.jpg");
-  border: 1px solid #CCC;
-  height: 300px;
-  margin:0;
-  padding:0;
+.others {
+	height:			180px;
+	overflow:		hidden;
+	position:		relative;
+	margin-top: 10px;
+}
+.others .caption {
+	font-size:		130%;
+	text-align: 		center;
+	color:			#fff;
+}
+.others:hover .hidmess {
+	opacity:		1;	/* マスクを表示する */
+	padding-top:		80px;	/* ホバーで下にずらす */
+}
+/*全種類*/
+.all img {
+  -webkit-filter: sepia(0);
+  filter: sepia(0);
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+  width:100%;
+  height:100%;
 }
 
-.all:hover:after{
-  background-color: rgba(0,100,0,0.5);
-  height:300px;
+.all:hover img {
+  -webkit-filter: sepia(100%);
+  filter: sepia(100%);
+  width:100%;
+  height:180px;
   opacity: 0.5;
-  content: "All";
+  content: "Bin";
   display:block;
   position:center;
   text-align:center;
   color:#fff;
   font-size:7rem;
   font-style:none;
-  transition-duration: 1s;
+  transition-duration: .5s;
 }
+
+.all {
+	height:			180px;
+	overflow:		hidden;
+	position:		relative;
+	margin-top: 10px;
+}
+.all .caption {
+	font-size:		130%;
+	text-align: 		center;
+	color:			#fff;
+}
+.all:hover .hidmess {
+	opacity:		1;	/* マスクを表示する */
+	padding-top:		80px;	/* ホバーで下にずらす */
+}
+
+.hidmess {
+	width:			100%;
+	height:			100%;
+	position:		absolute;
+	top:			0;
+	left:			0;
+	opacity:		0;	/* マスクを表示しない */
+	background-color:	rgba(0,0,0,0.4);
+	-webkit-transition:	all 0.6s ease;
+	transition:		all 0.6s ease;
+}
+
+.hidmess .caption{
+  font-size: 5rem;
+}
+
+.head-line{
+  /*height:10px;*/
+  /*background: linear-gradient(-135deg, #E4A972, #9941D8);*/
+  border-bottom: double 5px #FFC778;
+}
+
+
 
 .bigfont{
   font-size:3rem;
+}
+
+/*@font-face {*/
+/*  font-family: 'Kaushan Script';*/
+/*  font-style: normal;*/
+/*  font-weight: 400;*/
+/*  src: url(https://themes.googleusercontent.com/static/fonts/kaushanscript/v1/qx1LSqts-NtiKcLw4N03IFhlQWQpSCpzb2Peu3I-Q34.woff) format('woff');*/
+/*}*/
+
+/*body {*/
+/*  font-family:'Kaushan Script';*/
+/*  font-size:200%;*/
+/*}*/
+
+
+.form-body p{
+  width:100%;
+  margin:0;
+}
+
+/* item */
+        .media .form-body {
+            height: 90px;
+        }
+        .media .form-heading {
+            height: 220px;
+        }
+        .media .form-heading img {
+            height: 200px;
+            max-width: 300px;
+        }
+        
+
+/*.form-heading{*/
+/*  width:220px;*/
+/*  height:220px;*/
+/*}*/
+main{
+  background-image:url('/bg1jpg.jpg');
+}
+
+main .container{
+  background-color:#fff;
+  
+}
+/*フォントまだ変えられない*/
+body{
+  font-family: arial;
+}
+
+.navbar-left img{
+  width:45px;
+  height:45px;
 }

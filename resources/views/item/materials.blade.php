@@ -2,62 +2,76 @@
 
 @section('content')
 
-<h2 class="text-center">材料から探す</h2>
+<h2 class="text-center head-line">材料から探す</h2>
 
 
 <div class="row">
-        <div class="">
-            <div class="materials-item-wrapper col-xs-4">
-                <a class="" href="{{ route('index.bin') }}">
-                    <div class="bin">
+
+        <div class="materials-item-wrapper col-xs-4">
+            <a class="" href="{{ route('index.bin') }}">
+                <div class="bin">
+                    <img src="material_items/bin.jpg">
+                    <div class="hidmess">
+                        <div class="caption">Bin</div>
                     </div>
-                </a> 
-            </div>
+                </div>
+            </a> 
+        </div>
+
+        
+        <div class="materials-item-wrapper col-xs-4">
+            <a class="" href="{{ route('index.box') }}">
+                <div class="box">
+                    <img src="material_items/box3.jpg">
+                    <div class="hidmess">
+                        <div class="caption">Box</div>
+                    </div>
+                </div>
+            </a> 
         </div>
         
-        <div class="">
-            <div class="materials-item-wrapper col-xs-4">
-                <a class="" href="{{ route('index.box') }}">
-                    <div class="box">
+        <div class="materials-item-wrapper col-xs-4">
+            <a class="" href="{{ route('index.flower') }}">
+                <div class="flower">
+                    <img src="material_items/flower1.jpg">
+                    <div class="hidmess">
+                        <div class="caption">Flower</div>
                     </div>
-                </a> 
-            </div>
+                </div>
+            </a> 
         </div>
         
-        <div class="">
-            <div class="materials-item-wrapper col-xs-4">
-                <a class="" href="{{ route('index.flower') }}">
-                    <div class="flower">
+        <div class="materials-item-wrapper col-xs-4">
+            <a class="" href="{{ route('index.cardboard') }}">
+                <div class="cardboard">
+                    <img src="material_items/cardboard3.jpg">
+                    <div class="hidmess">
+                        <div class="caption">Cardboard</div>
                     </div>
-                </a> 
-            </div>
+                </div>
+            </a> 
         </div>
         
-        <div class="">
-            <div class="materials-item-wrapper col-xs-4">
-                <a class="" href="{{ route('index.cardboard') }}">
-                    <div class="cardboard">
+        <div class="materials-item-wrapper col-xs-4">
+            <a class="" href="{{ route('index.others') }}">
+                <div class="others">
+                    <img src="material_items/all3.jpg">
+                    <div class="hidmess">
+                        <div class="caption">Others</div>
                     </div>
-                </a> 
-            </div>
+                </div>
+            </a> 
         </div>
         
-        <div class="">
-            <div class="materials-item-wrapper col-xs-4">
-                <a class="" href="{{ route('index.others') }}">
-                    <div class="others">
+        <div class="materials-item-wrapper col-xs-4">
+            <a class="" href="{{ route('index.all') }}">
+                <div class="all">
+                    <img src="material_items/all1.jpg">
+                    <div class="hidmess">
+                        <div class="caption">All</div>
                     </div>
-                </a> 
-            </div>
-        </div>
-        
-        <div class="">
-            <div class="materials-item-wrapper col-xs-4">
-                <a class="" href="{{ route('index.all') }}">
-                    <div class="all">
-                    </div>
-                </a> 
-            </div>
+                </div>
+            </a> 
         </div>
 </div>
 

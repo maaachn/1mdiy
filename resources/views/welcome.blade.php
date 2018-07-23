@@ -5,10 +5,10 @@
         <div class="cover-inner">
             <div class="text-center">
                 <div class="cover-contents">
-                    <div class="main-movie clearfix">
-                        <video poster="" id="bgvid" playsinline autoplay muted loop>
+                    <div class="main-movie clearfix col-xs-12">
+                        <video class="col-xs-12" poster="" id="bgvid" playsinline autoplay muted loop>
                      
-                        <source src="toppagetest8.mp4" type="video/mp4">
+                        <source src="toppagetest.mp4" type="video/mp4">
                         
                         </video>
                        
