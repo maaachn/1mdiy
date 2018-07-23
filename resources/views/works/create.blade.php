@@ -1,20 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
+   <a href="{{ route('works.index') }}" class="btn btn-primary btn-lg">自分の投稿作品を見る</a>
     @if (Auth::user()->id == $user->id)
     <div class="row">
         {!! Form::open(['route' => 'works.store']) !!}
             <div class="form-group col-xs-6">
                 {!! Form::label('name', '作品名') !!}
-                {!! Form::text('name', old('name'), ['class' => 'form-control']) !!}
+                {!! Form::text('name', old('name'), ['class' => 'form-control', 'placeholder' => '（例）段ボールプロジェクター']) !!}
             </div>
             <div class="form-group col-xs-12">
                 {!! Form::label('name', '概要') !!}
-                {!! Form::textarea('content', old('content'), ['class' => 'form-control', 'rows' => '2']) !!}
+                {!! Form::textarea('content', old('content'), ['class' => 'form-control', 'rows' => '2', 'placeholder' => '（例）段ボールで作る簡単・お手軽プロジェクター']) !!}
             </div>
             <div class="form-group col-xs-12">    
                 {!! Form::label('name', '画像URL') !!}
-                {!! Form::textarea('image_url', old('image_url'), ['class' => 'form-control', 'rows' => '2']) !!}
+                {!! Form::textarea('image_url', old('image_url'), ['class' => 'form-control', 'rows' => '2', 'placeholder' => '完成品のイメージURLを貼ってください（なければ適当な文字列でOK）']) !!}
             </div>
             <div class="form-group">    
                 {!! Form::label('name', '主な材料') !!}
@@ -42,7 +43,7 @@
             <div class="col-xs-6">
                 <div class="form-group">    
                     {!! Form::label('name', '材料1') !!}
-                    {!! Form::text('material1', old('material1'), ['class' => 'form-control']) !!}
+                    {!! Form::text('material1', old('material1'), ['class' => 'form-control', 'placeholder' => '（例）びん、段ボールなど']) !!}
                 </div>
                 <div class="form-group">
                     {!! Form::label('name', '材料2（任意）') !!}
@@ -64,7 +65,7 @@
             <div class="col-xs-12">
                 <div class="form-group">    
                     {!! Form::label('name', '手順1') !!}
-                    {!! Form::textarea('recipe1', old('recipe1'), ['class' => 'form-control', 'rows' => '2']) !!}
+                    {!! Form::textarea('recipe1', old('recipe1'), ['class' => 'form-control', 'rows' => '2', 'placeholder' => '（例）段ボールを15㎝四方に切ります']) !!}
                 </div>
                 <div class="form-group">    
                     {!! Form::label('name', '手順2（任意）') !!}
@@ -86,7 +87,7 @@
             <div class="col-xs-6">
                 <div class="form-group">    
                     {!! Form::label('name', '必要な道具1') !!}
-                    {!! Form::text('tool1', old('tool1'), ['class' => 'form-control']) !!}
+                    {!! Form::text('tool1', old('tool1'), ['class' => 'form-control', 'placeholder' => '（例）はさみ']) !!}
                 </div>
                 <div class="form-group">    
                     {!! Form::label('name', '必要な道具2（任意）') !!}
@@ -110,9 +111,9 @@
             </div>
         {!! Form::close() !!}
     </div>
+    @else
+        @include('auth.login')
     @endif
     
-        <div class="form-group">
-            @include('item.item', ['items' => $items])
-        </div>
+        
 @endsection

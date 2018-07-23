@@ -52,6 +52,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('users', 'UsersController', ['only' => ['index', 'show']]);
    //ユーザー投稿機能,ユーザー投稿ページ,ユーザー投稿詳細ページ
     Route::get('works/create', 'ItemsController@create')->name('works.create');
+    Route::get('works/index','ItemsController@works')->name('works.index');
     Route::post('works', 'ItemsController@store')->name('works.store');
     Route::delete('works/{id}', 'ItemsController@destroy')->name('works.destroy');
     

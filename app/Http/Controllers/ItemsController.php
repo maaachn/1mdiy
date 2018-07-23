@@ -19,7 +19,7 @@ class ItemsController extends Controller
     
     public function bin(){
         
-        $items = \DB::table('items')->select('items.*')->where('m_type', 'びん')->paginate(9);
+        $items = \DB::table('items')->select('items.*')->where('m_type', 'びん')->orderby('created_at','desc')->paginate(9);
         
         return view('item.index',[
             'items' => $items,
@@ -28,7 +28,7 @@ class ItemsController extends Controller
     
     public function box(){
             
-        $items = \DB::table('items')->select('items.*')->where('m_type', '箱')->paginate(9);
+        $items = \DB::table('items')->select('items.*')->where('m_type', '箱')->orderby('created_at','desc')->paginate(9);
 
         return view('item.index',[
             'items' => $items,
@@ -37,7 +37,7 @@ class ItemsController extends Controller
     
     public function flower(){
             
-        $items = \DB::table('items')->select('items.*')->where('m_type', '花')->paginate(9);
+        $items = \DB::table('items')->select('items.*')->where('m_type', '花')->orderby('created_at','desc')->paginate(9);
 
         return view('item.index',[
             'items' => $items,
@@ -46,7 +46,7 @@ class ItemsController extends Controller
     
     public function cardboard(){
             
-        $items = \DB::table('items')->select('items.*')->where('m_type', '段ボール')->paginate(9);
+        $items = \DB::table('items')->select('items.*')->where('m_type', '段ボール')->orderby('created_at','desc')->paginate(9);
 
         return view('item.index',[
             'items' => $items,
@@ -55,7 +55,7 @@ class ItemsController extends Controller
     
     public function others(){
             
-        $items = \DB::table('items')->select('items.*')->where('m_type', 'その他')->paginate(9);
+        $items = \DB::table('items')->select('items.*')->where('m_type', 'その他')->orderby('created_at','desc')->paginate(9);
 
         return view('item.index',[
             'items' => $items,
@@ -79,7 +79,7 @@ class ItemsController extends Controller
     
     public function aroma(){
         
-        $items = \DB::table('items')->select('items.*')->where('u_type', 'アロマ')->paginate(9);
+        $items = \DB::table('items')->select('items.*')->where('u_type', 'アロマ')->orderby('created_at','desc')->paginate(9);
         
         return view('item.index',[
             'items' => $items,
@@ -88,7 +88,7 @@ class ItemsController extends Controller
     
     public function cover(){
             
-        $items = \DB::table('items')->select('items.*')->where('u_type', 'カバー')->paginate(9);
+        $items = \DB::table('items')->select('items.*')->where('u_type', 'カバー')->orderby('created_at','desc')->paginate(9);
 
         return view('item.index',[
             'items' => $items,
@@ -97,7 +97,7 @@ class ItemsController extends Controller
     
     public function light(){
             
-        $items = \DB::table('items')->select('items.*')->where('u_type', '照明')->paginate(9);
+        $items = \DB::table('items')->select('items.*')->where('u_type', '照明')->orderby('created_at','desc')->paginate(9);
 
         return view('item.index',[
             'items' => $items,
@@ -106,7 +106,7 @@ class ItemsController extends Controller
     
     public function interior(){
             
-        $items = \DB::table('items')->select('items.*')->where('u_type', 'インテリア')->paginate(9);
+        $items = \DB::table('items')->select('items.*')->where('u_type', 'インテリア')->orderby('created_at','desc')->paginate(9);
 
         return view('item.index',[
             'items' => $items,
@@ -116,7 +116,7 @@ class ItemsController extends Controller
 
     public function storage(){
         
-        $items = \DB::table('items')->select('items.*')->where('u_type', '収納')->paginate(9);
+        $items = \DB::table('items')->select('items.*')->where('u_type', '収納')->orderby('created_at','desc')->paginate(9);
 
         return view('item.index',[
             'items' => $items,
@@ -125,7 +125,7 @@ class ItemsController extends Controller
     
     public function u_others(){
             
-        $items = \DB::table('items')->select('items.*')->where('u_type', 'その他')->paginate(9);
+        $items = \DB::table('items')->select('items.*')->where('u_type', 'その他')->orderby('created_at','desc')->paginate(9);
 
         return view('item.index',[
             'items' => $items,
@@ -206,7 +206,7 @@ class ItemsController extends Controller
             'user_id' => \Auth::user()->id,
         ]);
 
-        return redirect('works/create');
+        return redirect('works/index');
     }
     
     public function destroy($id)
@@ -243,12 +243,23 @@ class ItemsController extends Controller
     public function create()
     {
         $user = \Auth::user();
+        $data = [
+            'user' => $user,
+            ];
+        $data += $this->counts($user);    
+        return view('works.create', $data);
+    }
+    
+    public function works(){
+        
+        $user = \Auth::user();
         $items = $user->works()->orderby('created_at','desc')->paginate(10);
+
         $data = [
             'user' => $user,
             'items' => $items,
             ];
         $data += $this->counts($user);    
-        return view('works.create', $data);
+        return view('works.index', $data);
     }
 }
