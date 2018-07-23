@@ -22,6 +22,7 @@
         <style>
         body {
             font-size: 20px;
+            /*font-family: "azuki-font Regular";*/
         }
         
         
@@ -29,7 +30,7 @@
             list-style : none;
         }
                     
-        /* item */
+
         .media .form-body {
             height: 70px;
         }
@@ -46,6 +47,18 @@
             object-fit: cover;
             border-radius: 8px;
         }
+
+        /*.media .form-body {*/
+        /*    height: 70px;*/
+        /*}*/
+        /*.media .form-heading {*/
+        /*    height: 250px;*/
+        /*}*/
+        /*.media .form-heading img {*/
+        /*    height: 200px;*/
+        /*    max-width: 300px;*/
+        /*}*/
+
         
         /*詳細ページ完成イメージ*/
         .showimg {
@@ -108,7 +121,7 @@
 
 .main-movie{
 
-    background-size: cover;
+    /*background-size: cover;*/
     text-align: center;
     position: relative;
     /*overflow: hidden;*/
@@ -117,7 +130,6 @@
 .main-movie video {
     margin: 0 auto;
     z-index: 1;
-    width: 100%;
 }
 
 .navbar {

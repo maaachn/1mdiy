@@ -2,67 +2,76 @@
 
 @section('content')
 
-<h2 class="text-center">材料から探す</h2>
+<h2 class="text-center head-line">材料から探す</h2>
+
 
 <div class="row">
-        <div class="bin">
-            <div class="materials-item-wrapper col-xs-6 col-md-4 ">
-                <a class="panel-wrapper" href="{{ route('index.bin') }}">
-                    <div class="panel panel-info bin">
-                        <p>びん</p>
+
+        <div class="materials-item-wrapper col-xs-4">
+            <a class="" href="{{ route('index.bin') }}">
+                <div class="bin">
+                    <img src="material_items/bin.jpg">
+                    <div class="hidmess">
+                        <div class="caption">Bin</div>
                     </div>
-                </a> 
-            </div>
+                </div>
+            </a> 
+        </div>
+
+        
+        <div class="materials-item-wrapper col-xs-4">
+            <a class="" href="{{ route('index.box') }}">
+                <div class="box">
+                    <img src="material_items/box3.jpg">
+                    <div class="hidmess">
+                        <div class="caption">Box</div>
+                    </div>
+                </div>
+            </a> 
         </div>
         
-        <div class="box">
-            <div class="materials-item-wrapper col-xs-6 col-md-4">
-                <a class="panel-wrapper" href="{{ route('index.box') }}">
-                <div class="panel panel-info">
-                    <p>空き箱</p>
+        <div class="materials-item-wrapper col-xs-4">
+            <a class="" href="{{ route('index.flower') }}">
+                <div class="flower">
+                    <img src="material_items/flower1.jpg">
+                    <div class="hidmess">
+                        <div class="caption">Flower</div>
+                    </div>
                 </div>
-                </a>
-            </div>
+            </a> 
         </div>
         
-        <div class="flower">
-            <div class="materials-item-wrapper col-xs-6 col-md-4">
-                <a class="panel-wrapper" href="{{ route('index.flower') }}">
-                <div class="panel panel-info">
-                    <p>お花</p>
+        <div class="materials-item-wrapper col-xs-4">
+            <a class="" href="{{ route('index.cardboard') }}">
+                <div class="cardboard">
+                    <img src="material_items/cardboard3.jpg">
+                    <div class="hidmess">
+                        <div class="caption">Cardboard</div>
+                    </div>
                 </div>
-                </a>
-            </div>
+            </a> 
         </div>
         
-        <div class="cardboard">
-            <div class="materials-item-wrapper col-xs-6 col-md-4">
-                <a class="panel-wrapper" href="{{ route('index.cardboard') }}">
-                <div class="panel panel-info">
-                    <p>段ボール</p>
+        <div class="materials-item-wrapper col-xs-4">
+            <a class="" href="{{ route('index.others') }}">
+                <div class="others">
+                    <img src="material_items/all3.jpg">
+                    <div class="hidmess">
+                        <div class="caption">Others</div>
+                    </div>
                 </div>
-                </a>
-            </div>
+            </a> 
         </div>
         
-        <div class="others">
-            <div class="materials-item-wrapper col-xs-6 col-md-4">
-                <a class="panel-wrapper" href="{{ route('index.others') }}">
-                <div class="panel panel-info">
-                    <p>その他</p>
+        <div class="materials-item-wrapper col-xs-4">
+            <a class="" href="{{ route('index.all') }}">
+                <div class="all">
+                    <img src="material_items/all1.jpg">
+                    <div class="hidmess">
+                        <div class="caption">All</div>
+                    </div>
                 </div>
-                </a>
-            </div>
-        </div>
-        
-        <div class="all">
-            <div class="materials-item-wrapper col-xs-6 col-md-4">
-                <a class="panel-wrapper" href="{{ route('index.all') }}">
-                <div class="panel panel-info">
-                    <p>全種類から</p>
-                </div>
-                </a>
-            </div>
+            </a> 
         </div>
 </div>
 
