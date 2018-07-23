@@ -1,0 +1,27 @@
+.zairyou{
+    display: none;
+}
+        
+.hidden_zairyou input:checked ~ .zairyou{
+    display: block;
+}
+    
+.tejun{
+    display: none;
+}
+        
+.hidden_tejun input:checked ~ .tejun{
+    display: block;
+}
+        
+.dougu{
+    display: none;
+}
+        
+.hidden_dougu input:checked ~ .dougu{
+    display: block;
+}
+        
+.checkbox{
+    font-size: 15px;
+}        
