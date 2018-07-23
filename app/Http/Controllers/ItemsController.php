@@ -138,7 +138,8 @@ class ItemsController extends Controller
         
         $item = Item::find($id);
         $process = \DB::table('item_process')->where('item_id',$id)->first();
-        
+        $user_id = $item->user_id;
+        $name = \DB::table('users')->join('items', 'users.id', '=', 'items.user_id')->where('users.id', $user_id)->select('users.name')->get();
         if($item == null) {
             return redirect('/');
         }
@@ -150,7 +151,7 @@ class ItemsController extends Controller
           'item' => $item,
           'comments'=>$comments,
           'process' => $process,
-
+          'name' => $name,
       ]);
     }
     
