@@ -24,6 +24,7 @@
             font-size: 20px;
         }
         
+        
         li{
             list-style : none;
         }
@@ -35,20 +36,27 @@
         .media .form-heading {
             height: 250px;
         }
+        
+         img {
+            max-width: 100%;
+        }
+        
         .media .form-heading img {
             height: 200px;
-            max-width: 300px;
+            object-fit: cover;
+            border-radius: 8px;
         }
         
         /*詳細ページ完成イメージ*/
         .showimg {
             height: 400px;
-            max-width: 600px; 
+            max-width: 100%; 
+            border-radius: 20%;
         }
         
          .media .form-body img {
             height: 200px;
-            max-width: 300px;
+            width: 200px;
         }
         
        
@@ -117,7 +125,20 @@
     color: #006600;
 }
 
- 
+#end{
+    height:40px;
+    padding:0;
+    z-index: 3;
+    margin-bottom: 0;
+    clear: both;
+    font-size: 30px;
+    background-color:#cc9966;
+}
+
+#end p{
+    margin: 0;
+    padding: 0;
+} 
 
 
         </style>
@@ -132,7 +153,7 @@
             <div>
                 @yield('cover')
             </div>
-            <div class="container">
+            <div class="container col-xs-offset-1 col-xs-10">
                 @include('commons.error_messages')
                 @yield('content')
             </div>

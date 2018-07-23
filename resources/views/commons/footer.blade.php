@@ -1,3 +1,3 @@
-<footer>
-    <div class="text-center text-muted">© 2018 クラフトマン.</div>
-</footer>
+<div id="end">
+    <p class="text-center text-muted">© 2018 クラフトマン.</p>
+</div>

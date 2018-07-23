@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-<link rel="stylesheet" type="text/css" href="css/login_signup.css">
+<link rel="stylesheet" type="text/css" href="/css/login_signup.css">
 <script src="/login_signup.js"></script>
 
 @section('content')

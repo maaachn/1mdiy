@@ -1,0 +1,26 @@
+/*item詳細のcss*/
+.set{
+    height: 500px;
+    clear: both;
+    margin-bottom: 50px;
+}
+
+
+/*.panel #show{*/
+/*    height: 100%;*/
+/*    width: 100%;*/
+/*}*/
+
+
+
+.box{
+    width: 50%;
+   
+    height: 100%;
+    display: inline;
+}
+
+.itemshow {
+    font-family: "Mplus 1p";
+}
+
