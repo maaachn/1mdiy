@@ -15,8 +15,8 @@
         <div class="col-xs-10">
             <ul class="nav nav-tabs nav-justified">
                 <li role="presentation" class="{{ Request::is('users/' . $user->id) ? 'active' : '' }}"><a href="{{ route('users.show', ['id' => $user->id]) }}">お気に入り</a></li>
-                <li role="presentation" class="{{ Request::is('works/index/id=' .$user->id) ? 'active' : '' }}"><a href="{{ route('works.index', ['id' => $user->id]) }}">投稿作品 </a></li>
-            </ul>
+                <li role="presentation" class="{{ Request::is('works/index') ? 'active' : '' }}"><a href="{{ route('works.index') }}">投稿作品 </a></li>
+            </ul>                                                           
             @include('item.item', ['items' => $items])
             {!! $items->render() !!}
         </div>
