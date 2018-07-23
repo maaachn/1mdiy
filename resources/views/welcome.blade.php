@@ -23,21 +23,28 @@
                             
                          <div id="auth2" class="overlay">
                              <div class="subtitle">
-                                <a href="{{ route('materials.get') }}" class="btn btn-warning btn-lg">☞ここから始める</a>
-                                </a>
+                                <a href="{{ route('materials.get') }}" class="btn start-btn btn-lg">☞作品一覧を見る</a>
+                                <a href="{{ route('works.create') }}" class="btn start-btn btn-lg">☞作品を投稿する</a>
                                 <br>
                                 <br>
                              </div>
+                         </div>
+                         
+                         <div id="auth3" class="overlay">
                              <div class="auth-button">    
                                 @if (!Auth::check())
-                                    <p>登録・ログインはこちら</p>
-                                    <p>登録して自分だけのクラフトを投稿しよう！</p>
-                                    <a href="{{ route('signup.get') }}" class="btn btn-success btn-lg">新規登録</a>
-                                    <a href="{{ route('login.post') }}" class="btn btn-primary btn-lg">ログイン</a>
+                                    <a href="{{ route('signup.get') }}" class="btn start2-btn btn-lg"><img src="signupimage.png"><br>新規登録</a>
+                                    <br>
+                                    <br>
+                                    <a href="{{ route('login.post') }}" class="btn start2-btn btn-lg"><img src="loginimage2.png"><br>ログイン</a>
+                                    <br>
+                                    <br>
                                 @else 
-                                    <a href="{{ route('logout.get') }}" class="btn btn-danger btn-lg">ログアウト</a>
+                                    <a href="{{ route('logout.get') }}" class="btn start2-btn btn-lg">ログアウト</a>
                                 @endif
+                                <p>☆登録するとお気に入りや投稿ができるようになるよ☆</p>
                              </div>
+                         </div>
                          </div>
                         </div>
              
