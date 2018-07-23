@@ -1,6 +1,6 @@
- $("#login-button").click(function(event){
+/*global$*/("#login-button").click(function(event){
 		 event.preventDefault();
 	 
-	 $('form').fadeOut(500);
-	 $('body').addClass('form-success');
+	 /*global$*/('form').fadeOut(500);
+	 /*global$*/('body').addClass('form-success');
 });
