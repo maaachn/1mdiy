@@ -40,7 +40,8 @@
         }
         .media .form-heading img {
             height: 200px;
-            max-width: 300px;
+           object-fit: cover;
+           border-radius: 8px;
         }
         
         /*詳細ページ完成イメージ*/
@@ -128,6 +129,11 @@
             margin-bottom: 0;
             padding: 0;
             background-color: #cc9966;
+            z-index: 5;
+        }
+        
+        img {
+            max-width: 100%;
         }
 
 
