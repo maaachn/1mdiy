@@ -2,7 +2,7 @@
     display: none;
 }
         
-.hidden_zairyou input:checked ~ .zairyou{
+.form-group input:checked ~ .zairyou{
     display: block;
 }
     
@@ -24,4 +24,9 @@
         
 .checkbox{
     font-size: 15px;
-}        
+    display: inline-block;
+}
+
+.nini {
+    display: none;
+}

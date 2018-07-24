@@ -3,7 +3,7 @@
 <link rel="stylesheet" type="text/css" href="/css/login_signup.css">
 
 @section('content')
-<div class="row">
+<div class="row col-xs-12">
 
 	<div class="logsign">
 		<h1>Welcome</h1>

@@ -139,19 +139,17 @@ class ItemsController extends Controller
         $item = Item::find($id);
         $process = \DB::table('item_process')->where('item_id',$id)->first();
         $user_id = $item->user_id;
-        $name = \DB::table('users')->join('items', 'users.id', '=', 'items.user_id')->where('users.id', $user_id)->select('users.name')->get();
         if($item == null) {
             return redirect('/');
         }
 
         
-       $comments = Comment::paginate(7);
+       $comments = Comment::where('item_id',$id)->paginate(5);
 
       return view('item.show', [
           'item' => $item,
           'comments'=>$comments,
           'process' => $process,
-          'name' => $name,
       ]);
     }
     
@@ -178,6 +176,11 @@ class ItemsController extends Controller
             'tool3' => 'max:191',
             'tool4' => 'max:191',
             'tool5' => 'max:191',
+            'process1' => 'max:191',
+            'process2' => 'max:191',
+            'process3' => 'max:191',
+            'process4' => 'max:191',
+            'process5' => 'max:191',
             
             
         ]);
@@ -206,7 +209,8 @@ class ItemsController extends Controller
             'tool5' => $request->tool5,
             'user_id' => \Auth::user()->id,
         ]);
-
+        
+        
         return redirect('works/index');
     }
     

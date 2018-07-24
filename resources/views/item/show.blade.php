@@ -1,18 +1,22 @@
 @extends('layouts.app')
 
 <link rel="stylesheet" type="text/css" href="/css/style3.css">
-<link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" />
 
 @section('content')
-<div class="itemshow">
+<div class="itemshow col-xs-12">
 <div class="cover">
         <div class="cover-contents">
+            <div class="col-xs-6">
             <h1>{{ $item->name }}</h1>
+            @if(isset($item->user->name) && $item->user->name != '')
+            <h3>作者：{{ $item->user->name }}</h3>
+            @endif
             <h2>{{ $item->content }}</h2>
+            </div>
             <div class="row set">
                 <div class="panel panel-default col-xs-6">
                     <div class="panel-heading">
-                        <img class="showimg" src="{{ secure_asset($item->image_url) }}">
+                        <img class="showing" src="{{ secure_asset($item->image_url) }}">
                         <div class="text-center middle">
                         @if(Auth::check())
                             @include('item.want_button', ['item' => $item])
@@ -45,46 +49,65 @@
                         </div>
                     </div>
                 </div>
-                <h2>作り方</h2>
+                
     <div class="row">
         <div class="media col-xs-6">    
             <div class="status text-center">
+                <h2>作り方</h2>
                 <div class="form-group col-xs-4">
-                    @if(isset($process))
+                    @if(isset($process) && $process->process1 != '')
                     <div class="form-heading text-center"><img src='{{ secure_asset($process->process1) }}' alt=''></div>
                     @else
-                    <div class="form-heading text-center"><img src="/coming.jpg" alt=''></div>
+                    <div class="form-heading text-center"><img src="/img/no_image.png" alt=''></div>
                     @endif
-                    <div class="form-body text-center"><p>{{ $item->recipe1 }}</p></div>
+                    @if(isset($item) && $item->recipe1 != '')
+                    <div class="form-body text-center"><p>1.{{ $item->recipe1 }}</p></div>
+                    @endif
                 </div>
                 <div class="form-group col-xs-4">
-                    @if(isset($process))
+                   @if(isset($process) && $process->process2 != '')
                     <div class="form-heading text-center"><img src='{{ secure_asset($process->process2) }}' alt=''></div>
+                    @else
+                    <div class="form-heading text-center"><img src="/img/no_image.png" alt=''></div>
                     @endif
-                    <div class="form-body text-center"><p>{{ $item->recipe2 }}</p></div>
+                    @if(isset($item) && $item->recipe2 != '')
+                    <div class="form-body text-center"><p>2.{{ $item->recipe2 }}</p></div>
+                    @endif
                 </div>
                 <div class="form-group col-xs-4">
-                    @if(isset($process))
+                   @if(isset($process) && $process->process3 != '')
                     <div class="form-heading text-center"><img src='{{ secure_asset($process->process3) }}' alt=''></div>
+                     @else
+                    <div class="form-heading text-center"><img src="/img/no_image.png" alt=''></div>
                     @endif
-                    <div class="form-body text-center"><p>{{ $item->recipe3 }}</p></div>
+                    @if(isset($item) && $item->recipe3 != '')
+                    <div class="form-body text-center"><p>3.{{ $item->recipe3 }}</p></div>
+                    @endif
                 </div>
                 <div class="form-group col-xs-4">
-                    @if(isset($process))
+                    @if(isset($process) && $process->process4 != '')
                     <div class="form-heading text-center"><img src='{{ secure_asset($process->process4) }}' alt='test'></div>
+                     @else
+                    <div class="form-heading text-center"><img src="/img/no_image.png" alt=''></div>
                     @endif
-                    <div class="form-body text-center"><p>{{ $item->recipe4 }}</p></div>
+                    @if(isset($item) && $item->recipe4 != '')
+                    <div class="form-body text-center"><p>4.{{ $item->recipe4 }}</p></div>
+                    @endif
                 </div>
                 <div class="form-group col-xs-4">
-                    @if(isset($process))
+                    @if(isset($process) && $process->process5 != '')
                     <div class="form-heading text-center"><img src='{{ secure_asset($process->process5) }}' alt='test'></div>
+                    @else
+                   <div class="form-heading text-center"><img src="/img/no_image.png" alt=''></div>
                     @endif
-                    <div class="form-body text-center"><p>{{ $item->recipe5 }}</p></div>
+                    @if(isset($item) && $item->recipe5 != '')
+                    <div class="form-body text-center"><p>5.{{ $item->recipe5 }}</p></div>
+                    @endif
                 </div>
             </div>
         </div>
 </div>
-<h2>口コミ一覧</h2>
+<h2 class="text-center">口コミ一覧</h2>
                     <div class="text-center">
                         @include('item.comment', ['comments' => $comments])
                     </div>

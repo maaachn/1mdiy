@@ -12,18 +12,20 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-
-       
-
-        
-      
-        
         <style>
         
-        html, body {
+        html {
             font-size: 20px;
-            height: 100%;
             font-family: "Mplus 1p";
+            height: 100%;
+            
+        }
+        
+        body {
+             font-family: "Mplus 1p";
+            min-height: 100%;
+          　display: flex;
+          　flex-direction: column;
         }
         
         li{
@@ -103,14 +105,17 @@
           text-align: center;
         }
         
-        
+        main {
+            display: flex;
+          flex-direction: column;
+         
+        }
 
         .main-movie{
-        
             background-size: cover;
             text-align: center;
             position: relative;
-            /*overflow: hidden;*/
+            
         }
          
         .main-movie video {
@@ -120,18 +125,34 @@
         }
         
         .navbar {
-            background-color: rgba(170,170,0,0.5)	;
-            color: #006600;
+            color: black;
+            background-color: #cc9966;
             height: 30px;
+            opacity: 0.9;
+        }
+        
+        nav .dropdown-menu {
+            padding: 0px;
+        }
+        
+        nav .dropdown-menu .divider{
+            font-weight: 10;
+            margin: 0;
+        }
+        
+        nav li{
+            background-color: #cc9966;
         }
 
         
         #end {
-            height: 5%;
-            margin-top:  10px;
-            margin-bottom: 0;
-            padding: 0;
-            z-index: 5;
+                margin-bottom: 0px;
+                position: fixed;
+                padding: 0px;
+                text-align: center;
+                z-index: 3;
+                clear: both;
+            
         }
         
         #end .bg1 {
@@ -152,10 +173,15 @@
         img {
             max-width: 100%;
         }
+        
+        .navbar-left img{
+          width:45px;
+          height:45px;
+        }
 
 
         </style>
-    <link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" />   
+    <link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet">   
     </head>
     
     
@@ -166,13 +192,14 @@
             <div>
                 @yield('cover')
             </div>
-            <div class="container">
+            <div class="container col-xs-10">
                 @include('commons.error_messages')
                 @yield('content')
             </div>
+           
         </main>
 
-        @include('commons.footer')
+         @include('commons.footer')
 
     </body>
 </html>
