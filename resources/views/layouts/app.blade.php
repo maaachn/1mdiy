@@ -13,63 +13,45 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
-        <link rel="stylesheet" href="css/style2.css">
-        <link rel="stylesheet" href="css/style1.css">
+       
 
         
       
         
         <style>
-        body {
-            font-size: 20px;
-            /*font-family: "azuki-font Regular";*/
-        }
         
+        html, body {
+            font-size: 20px;
+            height: 100%;
+            font-family: "Mplus 1p";
+        }
         
         li{
             list-style : none;
         }
+        
                     
-
+        /* item */
         .media .form-body {
             height: 70px;
         }
         .media .form-heading {
             height: 250px;
         }
-        
-         img {
-            max-width: 100%;
-        }
-        
         .media .form-heading img {
             height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
+            max-width: 300px;
         }
-
-        /*.media .form-body {*/
-        /*    height: 70px;*/
-        /*}*/
-        /*.media .form-heading {*/
-        /*    height: 250px;*/
-        /*}*/
-        /*.media .form-heading img {*/
-        /*    height: 200px;*/
-        /*    max-width: 300px;*/
-        /*}*/
-
         
         /*詳細ページ完成イメージ*/
         .showimg {
             height: 400px;
-            max-width: 100%; 
-            border-radius: 20%;
+            max-width: 600px; 
         }
         
          .media .form-body img {
             height: 200px;
-            width: 200px;
+            max-width: 300px;
         }
         
        
@@ -119,42 +101,38 @@
         
         
 
-.main-movie{
+        .main-movie{
+        
+            background-size: cover;
+            text-align: center;
+            position: relative;
+            /*overflow: hidden;*/
+        }
+         
+        .main-movie video {
+            margin: 0 auto;
+            z-index: 1;
+            width: 100%;
+        }
+        
+        .navbar {
+            background-color: rgba(170,170,0,0.5)	;
+            color: #006600;
+            height: 30px;
+        }
 
-    /*background-size: cover;*/
-    text-align: center;
-    position: relative;
-    /*overflow: hidden;*/
-}
- 
-.main-movie video {
-    margin: 0 auto;
-    z-index: 1;
-}
-
-.navbar {
-    background-color: rgba(170,170,0,0.5)	;
-    color: #006600;
-}
-
-#end{
-    height:40px;
-    padding:0;
-    z-index: 3;
-    margin-bottom: 0;
-    clear: both;
-    font-size: 30px;
-    background-color:#cc9966;
-}
-
-#end p{
-    margin: 0;
-    padding: 0;
-} 
+        
+        #end {
+            height: 5%;
+            margin-top:  10px;
+            margin-bottom: 0;
+            padding: 0;
+            background-color: #cc9966;
+        }
 
 
         </style>
-       
+    <link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" />   
     </head>
     
     
@@ -165,7 +143,7 @@
             <div>
                 @yield('cover')
             </div>
-            <div class="container col-xs-offset-1 col-xs-10">
+            <div class="container">
                 @include('commons.error_messages')
                 @yield('content')
             </div>

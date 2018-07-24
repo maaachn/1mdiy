@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 <link rel="stylesheet" type="text/css" href="/css/login_signup.css">
-<script src="/login_signup.js"></script>
+
 
 @section('content')
 <div class="row">
@@ -10,7 +10,7 @@
 		<h1>Welcome</h1>
 	
 	<form class="form col-xs-5">	
-	{!!Form::open() !!}
+	{!!Form::open(['route' => 'login.post']) !!}
 		
 			<input type="text" name="name" placeholder="Name" value="">
 		<br>

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<link rel="stylesheet" type="text/css" href="/css/style1.css">
 @section('content')
 
 <h2 class="text-center head-line">材料から探す</h2>

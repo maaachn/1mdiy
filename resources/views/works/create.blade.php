@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<link rel="stylesheet" type="text/css" href="/css/style4.css">
 @section('content')
    <a href="{{ route('works.index') }}" class="btn btn-primary btn-lg">自分の投稿作品を見る</a>
     @if (Auth::user()->id == $user->id)
@@ -74,7 +74,7 @@
                     {!! Form::textarea('recipe1', old('recipe1'), ['class' => 'form-control', 'rows' => '2', 'placeholder' => '（例）段ボールを15㎝四方に切ります']) !!}
                 </div>
                 <div class="hidden_tejun">
-                    <label for="label2" class="checkbox">材料を追加する</label>
+                    <label for="label2" class="checkbox">手順を追加する</label>
                     <input type="checkbox" id="label2"/>
                     <div class="tejun">
                         <div class="form-group">    
@@ -101,8 +101,8 @@
                     {!! Form::label('name', '必要な道具1') !!}
                     {!! Form::text('tool1', old('tool1'), ['class' => 'form-control', 'placeholder' => '（例）はさみ']) !!}
                 </div>
-                <div class="hidden_douguu">
-                    <label for="label3" class="checkbox">材料を追加する</label>
+                <div class="hidden_dougu">
+                    <label for="label3" class="checkbox">道具を追加する</label>
                     <input type="checkbox" id="label3"/>
                     <div class="dougu">
                         <div class="form-group">    

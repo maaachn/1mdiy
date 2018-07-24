@@ -1,5 +1,6 @@
 @extends('layouts.app')
-
+ <link rel="stylesheet" href="css/style2.css">
+ <link rel="stylesheet" href="css/style1.css">
 @section('cover')
     <div class="cover">
         <div class="cover-inner">
