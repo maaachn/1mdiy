@@ -135,6 +135,25 @@
         img {
             max-width: 100%;
         }
+        
+        main{
+          background-image:url('/bg1jpg.jpg');
+          
+          padding: 0;
+          margin: 0;
+          border: 0;
+        }
+        
+        main .container{
+          background-color:#fff;
+         
+        }
+        /*フォントまだ変えられない*/
+        
+        .navbar-left img{
+          width:45px;
+          height:45px;
+        }
 
 
         </style>

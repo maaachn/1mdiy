@@ -57,3 +57,9 @@
     </div>
 @endsection
 
+@section('content')
+    <div>
+  @include('item.materials')
+    </div>
+@endsection
+
