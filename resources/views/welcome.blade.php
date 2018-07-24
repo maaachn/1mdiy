@@ -59,7 +59,7 @@
 
 @section('content')
     <div>
-  @include('item.materials')
+  @include('item.material_inc')
     </div>
 @endsection
 

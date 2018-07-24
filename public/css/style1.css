@@ -153,7 +153,6 @@ background-position: right bottom;
 .bin{
   background-image: url("");
   border: 1px solid #CCC;
-  height: 150px;
   margin:0;
   padding:0;
   }
@@ -218,7 +217,7 @@ background-position: right bottom;
 }
 
 .bin .hidmess .caption{
-  font-size: 5rem;
+  font-size: 3rem;
 }
 /*箱*/
 .box img {
@@ -335,7 +334,7 @@ background-position: right bottom;
 	margin-top: 10px;
 }
 .cardboard .caption {
-	font-size:		130%;
+	font-size:		5rem;
 	text-align: 		center;
 	color:			#fff;
 }
@@ -417,7 +416,7 @@ background-position: right bottom;
 	margin-top: 10px;
 }
 .all .caption {
-	font-size:		130%;
+	font-size:		100%;
 	text-align: 		center;
 	color:			#fff;
 }
@@ -439,7 +438,7 @@ background-position: right bottom;
 }
 
 .hidmess .caption{
-  font-size: 5rem;
+  font-size: 3rem;
 }
 
 .head-line{
@@ -513,7 +512,6 @@ body{
 }
 
 .materials-item-wrapper{
-  height: 50%;
 }
 
 #auth2 { 
