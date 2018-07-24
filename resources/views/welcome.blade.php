@@ -10,7 +10,6 @@
                         <video class="col-xs-12" poster="" id="bgvid" playsinline autoplay muted loop>
 <!--動画変えるならここ-->
                         <source src="toppagetest.mp4" type="video/mp4">
-                        
                         </video>
                        
                     </div>
@@ -43,7 +42,8 @@
                                 @else 
                                     <a href="{{ route('logout.get') }}" class="btn start2-btn btn-lg">ログアウト</a>
                                 @endif
-                                <p>☆登録するとお気に入りや投稿ができるようになるよ☆</p>
+                             <div class="text">
+                                <p>☆お気に入りや投稿が<br>できるようになるよ☆</p>
                              </div>
                          </div>
                          </div>
