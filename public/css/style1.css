@@ -19,25 +19,25 @@
 
 #auth .title h1{
   
-  /*color:rgba(200,0,0,5);*/
-  /*border:0;*/
-  /*margin:0;*/
-  /*padding:0;*/
-  /*margin-left: 10px;*/
-  /*position: relative;*/
-  /*border-radius: 4px;*/
-  /*color: #fff;*/
-  /*line-height: 50px;*/
-  /*-webkit-box-sizing: content-box;*/
-  /*-moz-box-sizing: content-box;*/
-  /*box-sizing: content-box;*/
-  /*-webkit-transition: none;*/
-  /*transition: none;*/
-  /*text-shadow: 0px 1px 0px #f56778;*/
-  /*bottom: 750px;*/
-  /*left:10px;*/
-  /*padding: 1rem;*/
-  /*text-align: center;*/
+  color:rgba(200,0,0,5);
+  border:0;
+  margin:0;
+  padding:0;
+  margin-left: 10px;
+  position: relative;
+  border-radius: 4px;
+  color: #fff;
+  line-height: 50px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-transition: none;
+  transition: none;
+  text-shadow: 0px 1px 0px #f56778;
+  bottom: 750px;
+  left:10px;
+  padding: 1rem;
+  text-align: center;
   font-size: 5rem;
   color: red;
   border:0;

@@ -26,14 +26,14 @@
   
 }
 
-#auth .title h1{
-  font-size: 8rem;
-  color:rgba(200,0,0,5);
-  border:0;
-  margin:0;
-  padding:0;
+/*#auth .title h1{*/
+/*  font-size: 8rem;*/
+/*  color:rgba(200,0,0,5);*/
+/*  border:0;*/
+/*  margin:0;*/
+/*  padding:0;*/
   
-}
+/*}*/
 #auth .title p{
   font-size: 3rem;
   color: white;
