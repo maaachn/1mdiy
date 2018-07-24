@@ -23,7 +23,7 @@
                          @include('item.delete_button', ['item' => $item])
                     </div>
                     @endif
-                
+            <br> 
             </div>
         </div>
     

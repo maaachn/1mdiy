@@ -39,7 +39,7 @@
             height: 250px;
         }
         .media .form-heading img {
-            height: 200px;
+            height: 230px;
            object-fit: cover;
            border-radius: 8px;
         }
@@ -55,7 +55,9 @@
             max-width: 300px;
         }
         
-       
+       .form-group{
+           margin-bottom: 40px;
+       }
         
         .media-object {
           opacity: 1;
@@ -69,6 +71,7 @@
             opacity: 0.6;
             transition: 0.7s;
         }
+        
         
         /*user*/
         
@@ -128,8 +131,22 @@
             margin-top:  10px;
             margin-bottom: 0;
             padding: 0;
-            background-color: #cc9966;
             z-index: 5;
+        }
+        
+        #end .bg1 {
+            background-color: #cc9966;
+            opacity: 0.5;
+        }
+        
+        #end .bg2 {
+            background-color: #cc9966;
+            opacity: 0.7;
+        }
+        
+        #end .bg3 {
+            background-color: #cc9966;
+           
         }
         
         img {
