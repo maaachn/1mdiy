@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+
+/*背景画像*/
+main{
+        background-image:url('/bg1jpg.jpg');
+        padding: 0;
+        margin: 0;
+        border: 0;
+}
+        
+main .container{
+        background-color:#fff;
+         
+}
+
+/*任意のフォーム*/
 .zairyou{
     display: none;
 }
@@ -29,4 +45,177 @@
 
 .nini {
     display: none;
+}
+
+
+/*追加ボタン*/
+.craftbtn {
+  position: relative;
+  -webkit-perspective: 300px;
+  perspective: 300px;
+  display: inline-block;
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+}
+
+.craftbtn::before,
+.craftbtn::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.craftbtn,
+.craftbtn::before,
+.craftbtn::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.craftbtn span {
+  display: block;
+  position: absolute;
+  width: 200px;
+  height: 60px;
+  border: 2px solid #333;
+  text-align: center;
+  line-height: 56px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  pointer-events: none;
+}
+.craftbtn span:nth-child(1) {
+  background-color: #333;
+  color: #fff;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -30px;
+  -moz-transform-origin: 50% 50% -30px;
+  transform-origin: 50% 50% -30px;
+}
+.craftbtn span:nth-child(2) {
+  background-color: #fff;
+  color: #333;
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -30px;
+  -moz-transform-origin: 50% 50% -30px;
+  transform-origin: 50% 50% -30px;
+}
+.craftbtn:hover span:nth-child(1) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.craftbtn:hover span:nth-child(2) {
+  background-color: #333;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+}
+
+
+/*投稿ボタン*/
+.submit {
+  background-color: #333;
+  color: #fff;
+  display: inline-block;
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+}
+.submit:hover {
+  letter-spacing: 5px;
+  
+}
+
+.submit::before,
+.submit::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.submit,
+.submit::before,
+.submit::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+
+/*自分の作品を見るボタン*/
+.button {
+    display: inline-block;
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+  position: relative;
+  z-index: 2;
+  border: 2px solid #333;
+  color: #fff;
+  line-height: 50px;
+  -webkit-perspective: 300px;
+  perspective: 300px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.button:hover {
+  color: #333;
+}
+.button::after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+  -webkit-transform: rotateX(0);
+  transform: rotateX(0);
+}
+.button:hover::after {
+  -webkit-transform: rotateX(-180deg);
+  transform: rotateX(-180deg);
+}
+
+
+
+.button::before,
+.button::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+
+.button,
+.button::before,
+.button::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }

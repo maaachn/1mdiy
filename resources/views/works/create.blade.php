@@ -2,10 +2,16 @@
 <link rel="stylesheet" type="text/css" href="/css/style4.css">
 @section('content')
     @if (Auth::user()->id == $user->id)
+    
+                
     <div class="row col-md-offset-1 col-md-10 ">
+    <div class="form-group text-right col-xs-12"> 
+    <a class="" href="{{ route('works.index') }}" ><button class="button">自分の作品を見る</button></a> 
+    </div>
+    <h2>■投稿フォーム■</h2>
         {!! Form::open(['route' => 'works.store']) !!}
+        
             <div class="form-group col-xs-7">
-                <a class="btn btn-primary" href="{{ route('works.index') }}" >自分の投稿作品を見る</a>
                 <br><br>
                 {!! Form::label('name', '作品名') !!}
                 {!! Form::text('name', old('name'), ['class' => 'form-control', 'placeholder' => '（例）段ボールプロジェクター']) !!}
@@ -47,7 +53,7 @@
                 <div class="form-group">    
                     {!! Form::label('name', '材料1') !!}
                     {!! Form::text('material1', old('material1'), ['class' => 'form-control', 'placeholder' => '（例）びん、段ボールなど']) !!}
-                    <label for="label1" class="checkbox btn btn-primary ">材料を追加する</label>
+                    <label for="label1" class="checkbox craftbtn"><span>材料の追加</span><span>材料の追加</span></label>
                     <input type="checkbox" id="label1" class="nini"/>
                     <div class="zairyou">
                         <div class="form-group">
@@ -73,7 +79,7 @@
                 <div class="form-group">    
                     {!! Form::label('name', '手順1') !!}
                     {!! Form::textarea('recipe1', old('recipe1'), ['class' => 'form-control', 'rows' => '2', 'placeholder' => '（例）段ボールを15㎝四方に切ります']) !!}
-                    <label for="label2" class="checkbox btn btn-primary">手順を追加する</label>
+                    <label for="label2" class="checkbox craftbtn"><span>手順の追加</span><span>手順の追加</span></label>
                     <input type="checkbox" id="label2" class="nini"/>
                     <div class="tejun">
                         <div class="form-group">    
@@ -99,7 +105,7 @@
                 <div class="form-group">    
                     {!! Form::label('name', '必要な道具1') !!}
                     {!! Form::text('tool1', old('tool1'), ['class' => 'form-control', 'placeholder' => '（例）はさみ']) !!}
-                    <label for="label3" class="checkbox btn btn-primary">道具を追加する</label>
+                    <label for="label3" class="checkbox craftbtn"><span>道具の追加</span><span>道具の追加</span></label>
                     <input type="checkbox" id="label3" class="nini"/>
                     <div class="dougu">
                         <div class="form-group">    
@@ -121,8 +127,10 @@
                     </div>
                 </div>    
             </div>
-            <div class="form-group">    
-                {!! Form::submit('Create', ['class' => 'btn btn-primary btn-block']) !!}
+            <br>
+            <br>
+            <div class="form-group text-right col-xs-12">    
+                {!! Form::submit('作品を投稿する', ['class' => 'submit']) !!}
             </div>
         {!! Form::close() !!}
     </div>
