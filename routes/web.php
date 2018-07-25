@@ -62,3 +62,5 @@ Route::group(['middleware' => 'auth'], function () {
     Route::delete('comment/{id}','CommentsController@destroy')->name('comments.destroy');
 });
 
+//how to use
+Route::get('howtouse', "WelcomeController@howtouse");
