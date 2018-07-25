@@ -64,7 +64,7 @@ class ItemsController extends Controller
 
     public function index(){
         
-        $items = Item::paginate(9);
+        $items = \DB::table('items')->select('items.*')->orderby('created_at','desc')->paginate(9);
 
         return view('item.index',[
             'items' => $items,
