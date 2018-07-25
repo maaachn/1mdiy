@@ -15,8 +15,10 @@
                         
                         <div id="auth" class="overlay">
                             <div class="title">
-                                <p>-クラフトマン-</p>
-                                <h1>Craftsman</h1>
+                                <!--<p>-クラフトマン-</p>-->
+                                <div class="logo">
+                                    <img src="logo53.png">
+                                </div>
                             </div>
                         </div>
                             
