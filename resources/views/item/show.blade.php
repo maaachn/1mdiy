@@ -1,22 +1,18 @@
 @extends('layouts.app')
 
 <link rel="stylesheet" type="text/css" href="/css/style3.css">
+<link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" />
 
 @section('content')
-<div class="itemshow col-xs-12">
+<div class="itemshow">
 <div class="cover">
         <div class="cover-contents">
-            <div class="col-xs-6">
             <h1>{{ $item->name }}</h1>
-            @if(isset($item->user->name) && $item->user->name != '')
-            <h3>作者：{{ $item->user->name }}</h3>
-            @endif
             <h2>{{ $item->content }}</h2>
-            </div>
             <div class="row set">
                 <div class="panel panel-default col-xs-6">
                     <div class="panel-heading">
-                        <img class="showing" src="{{ secure_asset($item->image_url) }}">
+                        <img class="showimg" src="{{ secure_asset($item->image_url) }}">
                         <div class="text-center middle">
                         @if(Auth::check())
                             @include('item.want_button', ['item' => $item])
@@ -49,11 +45,10 @@
                         </div>
                     </div>
                 </div>
-                
+                <h2>作り方</h2>
     <div class="row">
         <div class="media col-xs-6">    
             <div class="status text-center">
-                <h2>作り方</h2>
                 <div class="form-group col-xs-4">
                 @if(isset($item) && $item->recipe1 != '')
                     @if(isset($process) && $process->process1 != '')
@@ -122,7 +117,7 @@
             </div>
         </div>
 </div>
-<h2 class="text-center">口コミ一覧</h2>
+<h2>口コミ一覧</h2>
                     <div class="text-center">
                         @include('item.comment', ['comments' => $comments])
                     </div>

@@ -106,7 +106,7 @@
         }
         
         main {
-            display: flex;
+          display: flex;
           flex-direction: column;
          
         }
@@ -174,23 +174,16 @@
             max-width: 100%;
         }
 
-        main{
-          background-image:url('/bg1jpg.jpg');
-          
-          padding: 0;
-          margin: 0;
-          border: 0;
-        }
-        
-        main .container{
-          background-color:#fff;
-         
-        }
         /*フォントまだ変えられない*/
   
         .navbar-left img{
           width:45px;
           height:45px;
+        }
+        
+        .image-small{
+            width: 25px;
+            height:15px;
         }
 
 
@@ -201,12 +194,12 @@
     
     <body>
       @include('commons.navbar')  
-        <main>
+        <main class="col-xs-12">
 
             <div>
                 @yield('cover')
             </div>
-            <div class="container col-xs-10">
+            <div class="container">
                 @include('commons.error_messages')
                 @yield('content')
             </div>
