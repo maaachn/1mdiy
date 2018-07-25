@@ -10,7 +10,7 @@
     display: none;
 }
         
-.hidden_tejun input:checked ~ .tejun{
+.form-group input:checked ~ .tejun{
     display: block;
 }
         
@@ -18,7 +18,7 @@
     display: none;
 }
         
-.hidden_dougu input:checked ~ .dougu{
+.form-group input:checked ~ .dougu{
     display: block;
 }
         
