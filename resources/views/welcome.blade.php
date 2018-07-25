@@ -25,22 +25,6 @@
                             
                          
                          
-                         <div id="auth3" class="overlay col-xs-offset-10 col-xs-2">
-                             <div class="auth-button">    
-                                @if (!Auth::check())
-                                    <a href="{{ route('signup.get') }}" class="btn start2-btn btn-lg"><img src="signupimage.png"><br>新規登録</a>
-                                    <br>
-                                    <br>
-                                    <a href="{{ route('login.post') }}" class="btn start2-btn btn-lg"><img src="loginimage2.png"><br>ログイン</a>
-                                    <br>
-                                    <br>
-                                    <div class="text">
-                                        <p>☆お気に入りや投稿が<br>できるようになるよ☆</p>
-                                    </div>
-                                @else 
-                                    <a href="{{ route('logout.get') }}" class="btn start2-btn btn-lg">ログアウト</a>
-                                @endif
-                         </div>
                          </div>
                         </div>
              
