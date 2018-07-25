@@ -143,31 +143,26 @@
         nav li{
             background-color: #cc9966;
         }
-
         
-        #end {
-                margin-bottom: 0px;
-                position: fixed;
-                padding: 0px;
-                text-align: center;
-                z-index: 3;
-                clear: both;
-            
+        footer{
+            height:99px;
         }
         
-        #end .bg1 {
+        footer .bg1 {
             background-color: #cc9966;
             opacity: 0.5;
+            height:33px;
         }
         
-        #end .bg2 {
+        footer .bg2 {
             background-color: #cc9966;
             opacity: 0.7;
+            height:33px;
         }
         
-        #end .bg3 {
+        footer .bg3 {
             background-color: #cc9966;
-           
+            height:33px;
         }
         
         img {
@@ -185,6 +180,16 @@
             width: 25px;
             height:15px;
         }
+        
+        body
+        {
+          display: flex;
+          flex-direction: column;
+        }
+         
+        footer {
+          margin-top: auto;
+        }
 
 
         </style>
@@ -194,7 +199,7 @@
     
     <body>
       @include('commons.navbar')  
-        <main class="col-xs-12">
+        <main class="col-xs-12 clearfix">
 
             <div>
                 @yield('cover')
