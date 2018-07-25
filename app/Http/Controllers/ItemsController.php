@@ -144,7 +144,7 @@ class ItemsController extends Controller
         }
 
         
-       $comments = Comment::where('item_id',$id)->paginate(5);
+       $comments = Comment::where('item_id',$id)->orderby('created_at','desc')->paginate(5);
 
       return view('item.show', [
           'item' => $item,
