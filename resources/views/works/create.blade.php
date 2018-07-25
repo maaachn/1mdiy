@@ -1,11 +1,12 @@
 @extends('layouts.app')
 <link rel="stylesheet" type="text/css" href="/css/style4.css">
 @section('content')
-   <a class="btn btn-primary" href="{{ route('works.index') }}" >自分の投稿作品を見る</a>
     @if (Auth::user()->id == $user->id)
-    <div class="row">
+    <div class="row col-md-offset-1 col-md-10 ">
         {!! Form::open(['route' => 'works.store']) !!}
-            <div class="form-group col-xs-6">
+            <div class="form-group col-xs-7">
+                <a class="btn btn-primary" href="{{ route('works.index') }}" >自分の投稿作品を見る</a>
+                <br><br>
                 {!! Form::label('name', '作品名') !!}
                 {!! Form::text('name', old('name'), ['class' => 'form-control', 'placeholder' => '（例）段ボールプロジェクター']) !!}
             </div>
@@ -17,30 +18,32 @@
                 {!! Form::label('name', '画像URL') !!}
                 {!! Form::textarea('image_url', old('image_url'), ['class' => 'form-control', 'rows' => '2', 'placeholder' => '完成品のイメージURLを貼ってください']) !!}
             </div>
-            <div class="form-group">    
-                {!! Form::label('name', '主な材料') !!}
-                {!! Form::select('m_type', [
-                'びん' => 'びん',
-                '空き箱' => '空き箱',
-                '花' => '花',
-                '段ボール' => '段ボール',
-                'その他' => 'その他'
-                ], 
-                ['class' => 'form-control', 'rows' => '2']) !!}
-            </div>
-            <div class="form-group">    
-                {!! Form::label('name', '主な用途') !!}
-                {!! Form::select('u_type', [
-                'アロマ' => 'アロマ',
-                'カバー' => 'カバー・ケース',
-                '照明' => '照明',
-                'インテリア' => 'インテリア',
-                '収納' => '収納',
-                'その他' => 'その他',
-                ], 
-                ['class' => 'form-control', 'rows' => '2']) !!}
-            </div>
             <div class="col-xs-6">
+                <div class="form-group">    
+                    {!! Form::label('name', '主な材料') !!}
+                    {!! Form::select('m_type', [
+                    'びん' => 'びん',
+                    '空き箱' => '空き箱',
+                    '花' => '花',
+                    '段ボール' => '段ボール',
+                    'その他' => 'その他'
+                    ], 
+                    ['class' => 'form-control', 'rows' => '2']) !!}
+                </div>
+                <div class="form-group">    
+                    {!! Form::label('name', '主な用途') !!}
+                    {!! Form::select('u_type', [
+                    'アロマ' => 'アロマ',
+                    'カバー' => 'カバー・ケース',
+                    '照明' => '照明',
+                    'インテリア' => 'インテリア',
+                    '収納' => '収納',
+                    'その他' => 'その他',
+                    ], 
+                    ['class' => 'form-control', 'rows' => '2']) !!}
+                </div>
+            </div>    
+            <div class="col-xs-7">
                 <div class="form-group">    
                     {!! Form::label('name', '材料1') !!}
                     {!! Form::text('material1', old('material1'), ['class' => 'form-control', 'placeholder' => '（例）びん、段ボールなど']) !!}
@@ -92,7 +95,7 @@
                     </div>
                 </div>    
             </div>
-            <div class="col-xs-6">
+            <div class="col-xs-7">
                 <div class="form-group">    
                     {!! Form::label('name', '必要な道具1') !!}
                     {!! Form::text('tool1', old('tool1'), ['class' => 'form-control', 'placeholder' => '（例）はさみ']) !!}

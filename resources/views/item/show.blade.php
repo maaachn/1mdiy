@@ -50,17 +50,18 @@
         <div class="media col-xs-6">    
             <div class="status text-center">
                 <div class="form-group col-xs-4">
-                @if(isset($item) && $item->recipe1 != '')
-                    @if(isset($process) && $process->process1 != '')
-                    <div class="form-heading text-center"><img src='{{ secure_asset($process->process1) }}' alt=''></div>
-                    @elseif(isset($process) && $process->process1 == '')
-                    <div class="form-heading text-center"></div>
-                    @else
-                    <div class="form-heading text-center"><img src="/img/no_image.png" alt=''></div>
+
+                    @if(isset($item) && $item->recipe1 != '')
+                        @if(isset($process) && $process->process1 != '')
+                        <div class="form-heading text-center"><img src='{{ secure_asset($process->process1) }}' alt=''></div>
+                        @elseif(isset($process) && $process->process1 == '')
+                        <div class="form-heading text-center"></div>
+                        @else
+                        <div class="form-heading text-center"><img src="/img/no_image.png" alt=''></div>
+                        @endif
+                        
+                        <div class="form-body text-center"><p>1.{{ $item->recipe1 }}</p></div>
                     @endif
-                    
-                    <div class="form-body text-center"><p>1.{{ $item->recipe1 }}</p></div>
-                @endif
                 </div>
                 <div class="form-group col-xs-4">
                 @if(isset($item) && $item->recipe2 != '')
@@ -114,10 +115,13 @@
                     <div class="form-body text-center"><p>5.{{ $item->recipe5 }}</p></div>
                 @endif
                 </div>
+
+                   
             </div>
         </div>
 </div>
-<h2>口コミ一覧</h2>
+                
+                <h2>口コミ一覧</h2>
                     <div class="text-center">
                         @include('item.comment', ['comments' => $comments])
                     </div>
@@ -127,5 +131,3 @@
     </div>
 </div>
 @endsection
-
-

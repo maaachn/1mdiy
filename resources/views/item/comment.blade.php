@@ -18,15 +18,19 @@
       <div class="col-sm-6" >
                 @foreach ($comments as $comment)
                 @if($comment->item_id == $item->id)
-                        <div class="status text-center">
+                        <div class="status text-left">
                             <div class="panel panel-primary">
                                 <div class="form-group">
                                     <div>
-                                        <p>{!! nl2br(e($comment->user->name)) !!}</p>
-                                        <p>{!! nl2br(e($comment->created_at)) !!}</p>
-                                        <p>{!! nl2br(e($comment->content)) !!}</p>
+                                        <span>　</span>
+                                        <img src="/img/toukousha.png" alt="toukousha">
+                                        <span class="lead">{!! nl2br(e($comment->user->name)) !!}</span>
+                                        <span class="text-muted">　　{!! nl2br(e($comment->created_at)) !!}</span>
+                                        <p></p>
+                                        <p class="lead user_comme">{!! nl2br(e($comment->content)) !!}</p>
                                     </div>
-                                    <div class="form-footer">
+                                    <br>
+                                    <div class="form-footer text-right">
                                         @include('item.comment_delete',['comment'=>$comment])
                                     </div>
                                 </div>
