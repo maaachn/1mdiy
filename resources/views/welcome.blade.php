@@ -1,11 +1,10 @@
 @extends('layouts.app')
  <link rel="stylesheet" href="css/style2.css">
- <link rel="stylesheet" href="css/style1.css">
 @section('cover')
     <div class="cover">
         <div class="cover-inner">
             <div class="text-center">
-                <div class="cover-contents">
+                <div class="cover-contents row col-xs-12">
                     <div class="main-movie clearfix col-xs-12">
                         <video class="col-xs-12" poster="" id="bgvid" playsinline autoplay muted loop>
 
@@ -30,7 +29,7 @@
                              </div>
                          </div>
                          
-                         <div id="auth3" class="overlay">
+                         <div id="auth3" class="overlay col-xs-offset-10 col-xs-2">
                              <div class="auth-button">    
                                 @if (!Auth::check())
                                     <a href="{{ route('signup.get') }}" class="btn start2-btn btn-lg"><img src="signupimage.png"><br>新規登録</a>

@@ -37,21 +37,20 @@
 }
 
 #auth3 { 
-	-webkit-border-radius: 50px / 25px;
-	border-radius: 50px / 25px;
-	margin: 100px;
   color: white;
-  padding: 1rem;
-  height:60%;
-  width: 8%;
-  margin:2rem;
-  float: right ;
-  font-size: 3rem;
-  position: absolute;
+  padding: 0;
+  height:0px;
+  width: px;
+  margin:0;
+  left: 70%;
+  /*float:center;*/
+  font-size: 2rem;
+  position: relative;
+  bottom:px;
 }
 
 #auth3 .auth-button {
-  margin-bottom: 1000px;
+  margin-bottom: 0px;
   position: relative;
   margin-left: 30px;
   border-radius: 4px;
@@ -63,8 +62,9 @@
   -webkit-transition: none;
   transition: none;
   text-shadow: 0px 1px 0px #f56778;
-  top: 420px;
-  left: 1000px;
+  bottom: 270px;
+  /*left:300px;*/
+  /*left: 1000px;*/
   	}
   
 #auth3 .text {
@@ -119,3 +119,501 @@
   margin: 0;
   border: 0;
 }
+
+#auth .title h1{
+  margin-left: 10px;
+  padding: 1rem;
+  text-align: center;
+  font-size: 5rem;
+  border:0;
+  margin:0;
+  padding:0;
+  position: relative;
+  border-radius: 4px;
+  color: rgba(200,0,0,5);;
+  line-height: 50px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-transition: none;
+  transition: none;
+  text-shadow: 0px 1px 0px #f56778;
+  bottom: 700px;
+  left:14%;
+}
+#auth .title p{
+  font-size: 1.5rem;
+  border:0;
+  margin:0;
+  padding:0;
+  position: relative;
+  border-radius: 4px;
+  color: #fff;
+  line-height: 50px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-transition: none;
+  transition: none;
+  text-shadow: 0px 1px 0px #f56778;
+  bottom: 720px;
+  left:15%;
+}
+
+#auth .title{
+  -webkit-text-stroke: 4px #000;
+}
+
+.subtitle{
+  color: #000;
+}
+
+video { 
+    position: relative;
+    top: 0px;
+    left: 50%;
+    min-width: 80%;
+    min-height: 80%;
+    width:　auto;
+    height: auto;
+    max-width:1200px;
+    max-height:900px;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-0%);
+    background-size: cover;
+    transition: 1s opacity;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  max-height: 100%;
+}
+
+body {
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: right bottom;
+}
+
+/*マテリアルホバー効果*/
+.bin img {
+  -webkit-filter: sepia(0);
+  filter: sepia(0);
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+  width:100%;
+  height:100%;
+}
+
+.bin:hover img {
+  -webkit-filter: sepia(100%);
+  filter: sepia(100%);
+  
+  height:180px;
+  opacity: 0.5;
+  content: "Bin";
+  display:block;
+  position:center;
+  text-align:center;
+  color:#fff;
+  font-size:80px;
+  font-style:none;
+  transition-duration: .5s;
+}
+
+.bin {
+  margin-top: 10px;
+	height:			180px;
+	overflow:		hidden;
+	position:		relative;
+}
+.bin .caption {
+	font-size:		120px;
+	text-align: 		center;
+	color:			#fff;
+}
+.bin .hidmess {
+	width:			100%;
+	height:			100%;
+	position:		absolute;
+	top:			0;
+	left:			0;
+	opacity:		0;	/* マスクを表示しない */
+	background-color:	rgba(0,0,0,0.4);
+	-webkit-transition:	all 0.6s ease;
+	transition:		all 0.6s ease;
+}
+.bin:hover .hidmess {
+	opacity:		1;	/* マスクを表示する */
+	padding-top:		80px;	/* ホバーで下にずらす */
+}
+
+.bin .hidmess .caption{
+  font-size: 3rem;
+}
+/*箱*/
+.box img {
+  -webkit-filter: sepia(0);
+  filter: sepia(0);
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+  width:100%;
+  height:100%;
+}
+
+.box:hover img {
+  -webkit-filter: sepia(100%);
+  filter: sepia(100%);
+  width:100%;
+  height:180px;
+  opacity: 0.5;
+  content: "Bin";
+  display:block;
+  position:center;
+  text-align:center;
+  color:#fff;
+  font-size:7rem;
+  font-style:none;
+  transition-duration: .5s;
+}
+
+.box {
+	height:			180px;
+	overflow:		hidden;
+	position:		relative;
+	margin-top: 10px;
+}
+.box .caption {
+	font-size:		130%;
+	text-align: 		center;
+	color:			#fff;
+}
+.box:hover .hidmess {
+	opacity:		1;	/* マスクを表示する */
+	padding-top:		80px;	/* ホバーで下にずらす */
+}
+/*花*/
+.flower img {
+  -webkit-filter: sepia(0);
+  filter: sepia(0);
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+  width:100%;
+  height:100%;
+}
+
+.flower:hover img {
+  -webkit-filter: sepia(100%);
+  filter: sepia(100%);
+  width:100%;
+  height:180px;
+  opacity: 0.5;
+  content: "Bin";
+  display:block;
+  position:center;
+  text-align:center;
+  color:#fff;
+  font-size:7rem;
+  font-style:none;
+  transition-duration: .5s;
+}
+
+.flower {
+	height:			180px;
+	overflow:		hidden;
+	position:		relative;
+	margin-top: 10px;
+}
+.flower .caption {
+	font-size:		130%;
+	text-align: 		center;
+	color:			#fff;
+}
+.flower:hover .hidmess {
+	opacity:		1;	/* マスクを表示する */
+	padding-top:		80px;	/* ホバーで下にずらす */
+}
+/*段ボール*/
+.cardboard img {
+  -webkit-filter: sepia(0);
+  filter: sepia(0);
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+  width:100%;
+  height:100%;
+}
+
+.cardboard:hover img {
+  -webkit-filter: sepia(100%);
+  filter: sepia(100%);
+  width:100%;
+  height:180px;
+  opacity: 0.5;
+  content: "Bin";
+  display:block;
+  position:center;
+  text-align:center;
+  color:#fff;
+  font-size:7rem;
+  font-style:none;
+  transition-duration: .5s;
+}
+
+.cardboard {
+	height:			180px;
+	overflow:		hidden;
+	position:		relative;
+	margin-top: 10px;
+}
+.cardboard .caption {
+	font-size:		5rem;
+	text-align: 		center;
+	color:			#fff;
+}
+.cardboard:hover .hidmess {
+	opacity:		1;	/* マスクを表示する */
+	padding-top:		80px;	/* ホバーで下にずらす */
+}
+/*その他*/
+.others img {
+  -webkit-filter: sepia(0);
+  filter: sepia(0);
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+  width:100%;
+  height:100%;
+}
+
+.others:hover img {
+  -webkit-filter: sepia(100%);
+  filter: sepia(100%);
+  width:100%;
+  height:180px;
+  opacity: 0.5;
+  content: "Bin";
+  display:block;
+  position:center;
+  text-align:center;
+  color:#fff;
+  font-size:7rem;
+  font-style:none;
+  transition-duration: .5s;
+}
+
+.others {
+	height:			180px;
+	overflow:		hidden;
+	position:		relative;
+	margin-top: 10px;
+}
+.others .caption {
+	font-size:		130%;
+	text-align: 		center;
+	color:			#fff;
+}
+.others:hover .hidmess {
+	opacity:		1;	
+	padding-top:		80px;	
+}
+/*全種類*/
+.all img {
+  -webkit-filter: sepia(0);
+  filter: sepia(0);
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+  width:100%;
+  height:100%;
+}
+
+.all:hover img {
+  -webkit-filter: sepia(100%);
+  filter: sepia(100%);
+  width:100%;
+  height:180px;
+  opacity: 0.5;
+  content: "Bin";
+  display:block;
+  position:center;
+  text-align:center;
+  color:#fff;
+  font-size:7rem;
+  font-style:none;
+  transition-duration: .5s;
+}
+
+.all {
+	height:			180px;
+	overflow:		hidden;
+	position:		relative;
+	margin-top: 10px;
+}
+.all .caption {
+	font-size:		100%;
+	text-align: 		center;
+	color:			#fff;
+}
+.all:hover .hidmess {
+	opacity:		1;	
+	padding-top:		80px;
+}
+
+.hidmess {
+	width:			100%;
+	height:			100%;
+	position:		absolute;
+	top:			0;
+	left:			0;
+	opacity:		0;	
+	background-color:	rgba(0,0,0,0.4);
+	-webkit-transition:	all 0.6s ease;
+	transition:		all 0.6s ease;
+}
+
+.hidmess .caption{
+  font-size: 3rem;
+}
+
+.head-line{
+  border-bottom: double 5px #FFC778;
+}
+
+        .media .form-body {
+            height: 90px;
+        }
+        .media .form-heading {
+            height: 220px;
+        }
+        .media .form-heading img {
+            height: 200px;
+            max-width: 300px;
+        }
+
+#auth2 { 
+	
+  color: white;
+  padding: 1rem;
+  height:50%;
+  width: 33%;
+  margin:2rem;
+  left: 31%;
+  float: center ;
+  font-size: 2rem;
+  position: relative;
+  bottom:px;
+}
+
+#auth2 .title{
+  -webkit-text-stroke: 4px #000;
+}
+
+.subtitle{
+  color: #000;
+}
+
+#auth2 .start-btn { 
+  margin-left: 30px;
+  position: relative;
+  border-radius: 4px;
+  color: #fff;
+  line-height: 50px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-transition: none;
+  transition: none;
+  text-shadow: 0px 1px 0px #f56778;
+  bottom: 500px;
+}
+a {
+
+color:white;
+
+}
+.start-btn,
+.start-btn:hover {
+  border-bottom: 4px solid #cb5462;
+  background-color: #f56778;
+  background-image: -webkit-linear-gradient(top, #f997b0, #f56778);
+  background-image: linear-gradient(to bottom, #f997b0, #f56778);
+  box-shadow: inset 1px 1px 0 #fbc1d0;
+}
+.start-btn::before,
+.start-btn::after {
+  bottom: -1px;
+  left: -1px;
+  width: 200px;
+  height: 50px;
+  border: 1px solid #ee8090;
+  border-bottom: 1px solid #b84d5a;
+  border-radius: 4px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-transition: none;
+  transition: none;
+}
+.start-btn::before {
+  color: white;
+  height: 48px;
+  bottom: -4px;
+  border-top: 0;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 1px 1px 0px #bfbfbf;
+}
+.start-btn:hover {
+  background: #f56778;
+  background-image: -webkit-linear-gradient(top, #f56778, #f997b0);
+  background-image: linear-gradient(to bottom, #f56778, #f997b0);
+  color: white;
+  text-shadow: 0px 1px 0px #f9a0ad;
+}
+.start-btn:active {
+  bottom: -4px;
+  margin-bottom: 4px;
+  border: none;
+  box-shadow: 1px 1px 0 #fff, inset 0 1px 1px rgba(0, 0, 0, .3);
+}
+.start-btn:active::before,
+.start-btn:active::after {
+  border: none;
+  box-shadow: none;
+}
+
+
+.start2-btn{
+  position: relative;
+  background-color: white;
+  border-radius: 4px;
+  color: black;
+  line-height: 52px;
+  -webkit-transition: none;
+  transition: none;
+  box-shadow: 0 3px 0 #f7ba59;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
+  
+}
+a {
+
+color:white;
+
+}
+.start2-btn:hover {
+  top: -4px;
+  box-shadow: 0 7px 0 #f7ba59;
+}
+.start2-btn:active {
+  top: 3px;
+  box-shadow: none;
+}
+
+@media screen and (max-width: 500px) { 
+  div{width:70%;} 
+}
+/*@media screen and (max-device-width: 800px) {*/
+/*  html { background: url(https://thenewcode.com/assets/images/polina.jpg) #000 no-repeat center center fixed; }*/
+/*  #bgvid { display: none; }*/
+/*}*/

@@ -194,12 +194,12 @@
     
     <body>
       @include('commons.navbar')  
-        <main>
+        <main class="col-xs-12">
 
             <div>
                 @yield('cover')
             </div>
-            <div class="container col-xs-10">
+            <div class="container">
                 @include('commons.error_messages')
                 @yield('content')
             </div>
