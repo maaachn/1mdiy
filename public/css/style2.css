@@ -10,10 +10,10 @@
   font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
   font-weight:100; 
   background: rgba(170,170,0,0.0);
-	-moz-border-radius: 50px / 25px;	/* 高さ÷2 */
+	-moz-border-radius: 50px / 25px;
 	-webkit-border-radius: 50px / 25px;
 	border-radius: 50px / 25px;
-  /*color: red;*/
+  color: red;
   padding: 1rem;
   height:50%;
   width: 25%;
@@ -23,198 +23,17 @@
   font-size: 2rem;
   position: relative;
   top: 5px;
+  text-align: center;
+  
   
 }
-
-/*#auth .title h1{*/
-/*  font-size: 8rem;*/
-/*  color:rgba(200,0,0,5);*/
-/*  border:0;*/
-/*  margin:0;*/
-/*  padding:0;*/
-  
-/*}*/
-#auth .title p{
-  font-size: 3rem;
-  color: white;
-  border:0;
-  margin:0;
-  padding:0;
-}
-
-#auth2 { 
- /* font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;*/
- /* font-weight:100; */
- /* background: rgba(170,170,0,0.3);*/
-	-moz-border-radius: 50px / 25px;	/* 高さ÷2 */
-	/*-webkit-border-radius: 50px / 25px;*/
-	/*border-radius: 50px / 25px;*/
-	
-  color: white;
-  padding: 1rem;
-  height:50%;
-  width: 33%;
-  margin:2rem;
-  left: 31%;
-  float: center ;
-  font-size: 2rem;
-  position: relative;
-  bottom:px;
-}
-
-#auth2 .title{
-  -webkit-text-stroke: 4px #000;
-}
-
-.subtitle{
-  color: #000;
-}
-
-#auth2 .start-btn { 
-  margin-left: 30px;
-  position: relative;
-  border-radius: 4px;
-  color: #fff;
-  line-height: 50px;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  -webkit-transition: none;
-  transition: none;
-  text-shadow: 0px 1px 0px #f56778;
-}
-a {
-
-color:white;
-
-}
-.start-btn,
-.start-btn:hover {
-  border-bottom: 4px solid #cb5462;
-  background-color: #f56778;
-  background-image: -webkit-linear-gradient(top, #f997b0, #f56778);
-  background-image: linear-gradient(to bottom, #f997b0, #f56778);
-  box-shadow: inset 1px 1px 0 #fbc1d0;
-}
-.start-btn::before,
-.start-btn::after {
-  bottom: -1px;
-  left: -1px;
-  width: 200px;
-  height: 50px;
-  border: 1px solid #ee8090;
-  border-bottom: 1px solid #b84d5a;
-  border-radius: 4px;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  -webkit-transition: none;
-  transition: none;
-}
-.start-btn::before {
-  color: white;
-  height: 48px;
-  bottom: -4px;
-  border-top: 0;
-  border-radius: 0 0 4px 4px;
-  box-shadow: 0 1px 1px 0px #bfbfbf;
-}
-.start-btn:hover {
-  background: #f56778;
-  background-image: -webkit-linear-gradient(top, #f56778, #f997b0);
-  background-image: linear-gradient(to bottom, #f56778, #f997b0);
-  color: white;
-  text-shadow: 0px 1px 0px #f9a0ad;
-}
-.start-btn:active {
-  bottom: -4px;
-  margin-bottom: 4px;
-  border: none;
-  box-shadow: 1px 1px 0 #fff, inset 0 1px 1px rgba(0, 0, 0, .3);
-}
-.start-btn:active::before,
-.start-btn:active::after {
-  border: none;
-  box-shadow: none;
-}
-
-
-.start2-btn{
-  position: relative;
-  background-color: white;
-  border-radius: 4px;
-  color: black;
-  line-height: 52px;
-  -webkit-transition: none;
-  transition: none;
-  box-shadow: 0 3px 0 #f7ba59;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
-  
-}
-a {
-
-color:white;
-
-}
-.start2-btn:hover {
-  top: -4px;
-  box-shadow: 0 7px 0 #f7ba59;
-}
-.start2-btn:active {
-  top: 3px;
-  box-shadow: none;
-}
-  /*display: block;*/
-  /*width: 80%;*/
-  /*padding: .4rem;*/
-  /*border: none; */
-  /*margin: 1rem auto; */
-  /*font-size: 1.3rem;*/
-  /*background: rgba(255,255,255,0.23);*/
-  /*color: #fff;*/
-  /*border-radius: 3px; */
-  /*cursor: pointer;*/
-  /*transition: .3s background;*/
-
-
-@media screen and (max-width: 500px) { 
-  div{width:70%;} 
-}
-@media screen and (max-device-width: 800px) {
-  html { background: url(https://thenewcode.com/assets/images/polina.jpg) #000 no-repeat center center fixed; }
-  #bgvid { display: none; }
-}
-
-
-/*body {*/
-/*background-repeat: repeat;*/
-/*background-attachment: fixed;*/
-/*background-position: right bottom;*/
-/*}*/
 
 .navbar {
-    background-color: rgba(170,170,0,0.5)	;
-    color: #006600;
-    padding: 0;
+  background-color: rgba(170,170,0,0.5)	;
+  color: #006600;
+  padding: 0;
   margin: 0;
   border: 0;
-}
-
-body{
-  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
-}
-
-.bin{
-  background-image: url('image3.jpg');
-}
-.materials-item-wrapper{
-  background-image: url("image3.jpg");
-}
-.panel{
-  background-image: url("image3.jpg");
-}
-.bin:hover{
-  
 }
 
 #auth3 { 
@@ -232,10 +51,9 @@ body{
 }
 
 #auth3 .auth-button {
-  	margin-bottom: 1000px;
-  	position: relative;
-  	margin-left: 30px;
- 
+  margin-bottom: 1000px;
+  position: relative;
+  margin-left: 30px;
   border-radius: 4px;
   color: #fff;
   line-height: 50px;
@@ -249,14 +67,7 @@ body{
   left: 1000px;
   	}
   
-#auth3 
- /* font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;*/
- /* font-weight:100;*/
- /* background: rgba(170,170,0,0.3);*/
-	/*-moz-border-radius: 50px / 25px;*/
-	/*-webkit-border-radius: 30px / 15px;*/
-	/*border-radius: 30px / 15px;*/
- .text {
+#auth3 .text {
 	position: relative;
 	display: inline-block;
 	padding: 0 15px;
